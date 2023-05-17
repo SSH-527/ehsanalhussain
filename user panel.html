@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ehsanalhussain-user panel</title>
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<!-- code -->
+<body class="panel container">
+    <div class="container dashboard" id="mainContent">
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 box panelItem">
+                <i class="fa fa-times cross" aria-hidden="true"></i>
+                <img src="image/user.png" alt="user profile" class="userImage pic-1">
+                <h6>کیان کاظمی</h6>
+                <p> سطح دسترسی : <span> کاربر</span></p>
+                <hr>
+                <div class="list">
+                    <ul>
+                        <li class="tabItem active">لیست هزینه ها</li>
+                        <li class="tabItem"> پروفایل کاربر</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="iconSection col-lg-12 col-sm-12">
+                    <div class="box col-lg-1 col-sm-1 mobileMenu">
+                        <i class="fa fa-bars menuIcon" aria-hidden="true"></i>
+                    </div>
+                    <div class="box col-lg-1 col-sm-1 exit">
+                        <img src="image/exit.png" alt="exit" title="خروج">
+                    </div>
+                </div>
+                <div class="cost box">
+                    <div class="content activeContent">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-12">
+                                    <div class="costItem ">
+                                        <img src="image/food.png" alt="food">
+                                        <h5 class="title">غذا</h5>
+                                        <p class="costItemDesc"> بازه ی زمانی 5 روز ، صبحانه ، ناهار و شام به همراه میوه
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="costFeature col-lg-8 col-sm-12">
+                                    <div class="feature col-sm-12">
+                                        <h6>قیمت هر سهم :</h6>
+                                        <span class="price" id="priceFood">500</span>
+                                        <span class="rial" style="color: #1a8acc;">ریال</span>
+                                    </div>
+                                    <div class="feature">
+                                        <h6 class="col-sm-2">تعداد :</h6>
+                                        <div class="units col-lg-4 col-sm-8">
+                                            <div class="btnNumber plus col-lg-1 col-sm-2"
+                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                id="plus">+</div>
+                                            <input type="number" class="number col-lg-2 col-sm-8 desired" min="0"
+                                                name="quantity" value="0" id="num1">
+                                            <div class="btnNumber minus col-lg-1 col-sm-2"
+                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                id="minus">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <h6>مبلغ دلخواه :</h6>
+                                        <input type="number" class="desired" id="foodDesired" value="0">
+                                        <span class="rial">ریال</span>
+                                    </div>
+                                    <div class="feature">
+                                        <h6> مجموع :</h6>
+                                        <div class="sum" id="sumFood"></div>
+                                        <span class="rial">ریال</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container hotel">
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-12">
+                                    <div class="costItem">
+                                        <img src="image/hotel.png" alt="hotel">
+                                        <h5 class="title">اسکان</h5>
+                                        <p class="costItemDesc"> بازه ی زمانی 5 روز </p>
+                                    </div>
+                                </div>
+                                <div class="costFeature col-lg-8 col-sm-12">
+                                    <div class="feature">
+                                        <h6>قیمت هر سهم :</h6>
+                                        <span class="price" id="priceHotel">100</span>
+                                        <span class="rial" style="color: #1a8acc;">ریال</span>
+                                    </div>
+                                    <div class="feature col-sm-12">
+                                        <h6 class="col-sm-2">تعداد :</h6>
+                                        <div class="units col-lg-4 col-sm-8">
+                                            <div class="btnNumber plus col-lg-1 col-sm-2"
+                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                                                id="plusHotel">+</div>
+                                            <input type="number" class="number col-lg-2 col-sm-8 desired" min="0"
+                                                name="quantity" value="0" id="num2">
+                                            <div class="btnNumber minus col-lg-1 col-sm-2"
+                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                                                id="minusHotel">-</div>
+                                        </div>
+                                    </div>
+                                    <div class="feature">
+                                        <h6>مبلغ دلخواه :</h6>
+                                        <input type="number" class="desired" id="hotelDesired" value="0" required>
+                                        <span class="rial">ریال</span>
+                                    </div>
+                                    <div class="feature">
+                                        <h6> مجموع :</h6>
+                                        <div class="sum" id="sumHotel"></div>
+                                        <span class="rial">ریال</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12 totalSum">
+                                    <h6>مجموع کل :</h6>
+                                    <div class="totalSumField col-lg-4 col-sm-2" id="totalSumField">
+                                        <span class="rial">ریال</span>
+                                    </div>
+                                    <button class="col-lg-4 col-sm-12" id="checkTable">پرداخت</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h5 class="title">مشخصات</h5>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="userImg col-lg-12 col-sm-12">
+                                        <img src="image/user.png" alt="user image" class="pic-2">
+                                        <div class="customInputFile col-lg-12">
+                                            <input type="file" hidden id="default" onchange="previewFile()">
+                                            <div class="fileBtn col-lg-4">
+                                                <button id="customBtn" class="col-lg-4 col-sm-12"
+                                                    onclick="active()">انتخاب فایل</button>
+                                            </div>
+                                            <div class="fileName" id="fileName"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row profileSection">
+                                <div class="col-lg-6 profileItem">
+                                    <label for="firstNameEdit">نام :</label>
+                                    <input type="text" id="firstNameEdit" class="col-lg-12" value="کیان">
+                                </div>
+                                <div class="col-lg-6 profileItem">
+                                    <label for="lastNameEdit">نام خانوادگی:</label>
+                                    <input type="text" id="lastNameEdit" class="col-lg-12" value="کاظمی">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6 profileItem">
+                                    <label for="numberEdit">شماره همراه :</label>
+                                    <input type="text" id="numberEdit" class="col-lg-12" value="09845781245803">
+                                </div>
+                                <div class="col-lg-6 profileItem">
+                                    <label for="personIDEdit">کدملی :</label>
+                                    <input type="text" id="personIDEdit" class="col-lg-12" value="0002145789654">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="totalSum">
+                            <button class="col-lg-4 col-sm-12" type="submit">ویرایش اطلاعات</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container dashboard hide" id="checkPayTable">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="iconSection col-lg-12 col-sm-12 headerCheckPay">
+                    <div class="box col-lg-1 col-sm-1">
+                        <img src="image/user.png">
+                    </div>
+                    <div class="box col-lg-1 col-sm-1 exit">
+                        <img src="image/exit.png" alt="exit" title="خروج">
+                    </div>
+                </div>
+                <div class="cost box">
+                    <h5 class="title costTitle">جزئیات پرداخت</h5>
+                    <div class="container table-responsive">
+                        <table class="table table-bordered table-hover table-">
+                            <th class="tableHead">عنوان</th>
+                            <th class="tableHead">قیمت هر سهم</th>
+                            <th class="tableHead">تعداد</th>
+                            <th class="tableHead">مبلغ دلخواه</th>
+                            <th class="tableHead">مجموع</th>
+                            <tr>
+                                <td>غذا</td>
+                                <td id="tdPriceFood"></td>
+                                <td id="tdNum1"></td>
+                                <td id="tdFoodDesired"></td>
+                                <td id="tdSumFood"></td>
+                            </tr>
+                            <tr>
+                                <td>اسکان</td>
+                                <td id="tdPriceHotel"></td>
+                                <td id="tdNum2"></td>
+                                <td id="tdHotelDesired"></td>
+                                <td id="tdSumHotel"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-sm-12 totalSum checkPaySum">
+                                <h6> مبلغ قابل پرداخت :</h6>
+                                <div class="totalSumField col-lg-4 col-sm-2" id="totalPay">
+                                    <span class="rial">ریال</span>
+                                </div>
+                                <button class="col-lg-4 col-sm-12">پرداخت</button>
+                                <a class="backToCost" href="user panel.html">بازگشت</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>

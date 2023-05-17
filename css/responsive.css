@@ -1,0 +1,366 @@
+/* --- responsive style --- */
+@media screen and (max-width:992px) {
+   body.loginPage {
+      background-image: url("../image/verification\ -\ background.png");
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+   } 
+   div.loginForm > form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .label {
+      align-self: flex-start;
+   }
+   form + span {
+      display: flex;
+      justify-content: center;
+   }
+   .submit {
+      align-self: center;
+      margin: 0;
+   }
+}
+@media screen and (max-width:576px) {
+   body.loginPage,body.verification {
+      background-image: url("../image/mobile\ -\ background.png");
+      background-size: 100% 100%;
+      background-position: center;
+      height: 100vh;
+   }
+   input.textInput {
+      width:90%;
+      max-width: 90%;
+   }
+   button.loginButton {
+      width:90%;
+      max-width: 90%;
+   }
+   div.loginForm > form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+   .label {
+      align-self: flex-start;
+   }
+   form + span {
+      display: flex;
+      justify-content: center;
+   }
+   div.signup {
+      margin-top: 45px;
+   }
+   .pic-2 {
+      height: 100px;
+   }
+   .pic-1 {
+      height: 110px;
+   }
+   
+}
+@media screen and (min-width:577px) and (max-width:992px) {
+   .pageTitle {
+      font-size: 2.5rem;
+   }
+   .subTitle {
+      font-size: 1.8rem;
+   }
+   .label {
+      font-size: 1.8rem;
+   }
+   input.textInput,button.loginButton {
+      height: 80px;
+      font-size: 1.5em;
+   }
+   form + span {
+      font-size: 1.3em;
+   }
+   .pic-2 {
+      height: 200px;
+   }
+   .pic-1 {
+      height: 150px;
+   }
+   
+}
+@media screen and (max-width:576px) {
+   .costItemDesc {
+      border-bottom: 1px solid #DCDCDC;
+      font-size: 1rem;
+      padding-bottom: 0.5rem;
+   }
+   .title {
+      font-size: 1.2rem;
+      line-height: 25px;
+   }
+   .costFeature {
+      border: none;
+   }
+   .feature > h6 {
+      font-size: 1.2rem;
+   }
+   span.price {
+      font-size: 1.2rem;
+   }
+   .btnNumber {
+      width: 60px;
+      font-size: 1.2rem;
+   }
+   .btnNumber , .number , .desired , .sum , .totalSumField {
+     height: 35px;
+   }
+   .sum {
+      font-size: 1rem;
+      width: fit-content;
+      padding: 0.3rem 0.5rem;
+   }
+   .content {
+      height: auto;
+   }
+   .totalSum > h6 {
+      font-size: 1.2rem;
+   }
+   .totalSumField {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .totalSum > button {
+      width: 80%;
+      height: 35px;
+      font-size: 1.2rem;
+   }
+   .iconSection > div > img {
+      width: 100%;
+   }
+   .iconSection > div {
+      width: 15%;
+   }
+   .userImg > img {
+      width: 30%;
+      max-width: 30%;
+   }
+   .profileItem > input {
+      font-size: 1rem;
+      width: 85%;
+   }
+   .profileItem > label {
+      font-size: 1.1rem;
+   }
+   .costItem > img {
+      width: 90%;
+      height: 90%;
+      align-self: center;
+      margin-top: 1rem;
+   }
+   .costItem {
+      display: flex;
+      flex-direction: column;
+   }
+   .panelItem > h6 {
+      font-size: 1.3rem;
+   }
+   .panelItem > p {
+      font-size: 1rem;
+   }
+   div.list > ul > li {
+      font-size: 1.2rem;
+   }
+   img.userImage {
+      width: 30%;
+   }
+   textarea {
+      width: 85%;
+      height: 150px;
+   }
+}
+@media screen and (min-width:577px) and (max-width:992px) {
+   .costItemDesc {
+      border-bottom: 1px solid #DCDCDC;
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
+      padding-bottom: 1rem;
+   }
+   .title {
+      font-size: 2.5rem;
+      line-height: 25px;
+      margin-top: 2rem;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border-right: 5px solid #1A8ACC;
+   }
+   .costFeature {
+      border: none;
+   }
+   .feature > h6 {
+      font-size: 1.7rem;
+   }
+   span.price {
+      font-size: 1.7rem;
+   }
+   .btnNumber {
+      width: 70px;
+      font-size: 2rem;
+   }
+   .number {
+      width: 20%;
+   }
+   .btnNumber , .number , .desired , .sum , .totalSumField {
+     height: 50px;
+   }
+   .sum {
+      font-size: 1.7rem;
+      width: fit-content;
+      padding: 0.3rem 0.5rem;
+   }
+   .content {
+      height: auto;
+   }
+   .totalSum > h6 {
+      font-size: 1.5rem;
+   }
+   .totalSumField {
+      width: 83%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+   }
+   .totalSum > button {
+      width: 83%;
+      font-size: 1.7rem;
+      padding: 1rem;
+   }
+   .iconSection > div > img {
+      width: 80%;
+   }
+   .iconSection > div {
+      width: 15%;
+   }
+   .userImg > img {
+      width: 30%;
+      max-width: 30%;
+   }
+   .profileItem > input {
+      font-size: 1.5rem;
+      width: 85%;
+   }
+   .profileItem > label {
+      font-size: 1.7rem;
+   }
+   .costItem > img {
+      width: 80%;
+      height: 80%;
+      align-self: center;
+      margin-top: 3rem;
+   }
+   .costItem {
+      display: flex;
+      flex-direction: column;
+   }
+   span.rial {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+   }
+   .totalSumField > span.rial {
+      left: -3.2rem;
+   }
+   .fileBtn > button {
+      font-size: 1.7rem;
+      padding: 0.9rem;
+      width: 300px;
+   }
+   .menuIcon {
+      font-size: 2.8rem;
+   }
+   .panelItem > h6 {
+      font-size: 1.8rem;
+   }
+   .panelItem > p {
+      font-size: 1.5rem;
+   }
+   div.list > ul > li {
+      font-size: 1.8rem;
+   }
+   img.userImage {
+      width: 20%;
+   }
+   textarea {
+      width: 85%;
+      height: 150px;
+   }
+}
+@media screen and (max-width:992px) {
+   .panelItem {
+      width: 90%;
+      position: fixed;
+      height: 110vh;
+      z-index: 1;
+      top: 0;
+      right: -100%;
+      transition: 1s;
+   }
+   .panelItem > i {
+      position: absolute;
+      left: 20px;
+      color: #AFAFAF;
+      cursor: pointer;
+      font-size: 1.5rem;
+  }
+  .mobileMenu {
+      display: block !important;
+  }
+  .iconSection  {
+      justify-content: space-between;
+   }
+  .cross {
+	display: block;
+   }
+}
+@media screen and (min-width:993px){
+   div.mobileMenu {
+      display: none !important;
+   }
+}
+@media screen and (min-width:577px) and (max-width:992px) {
+   .alertSection {
+      width: 90%;
+   }
+   .alertSection > h4 {
+      font-size: 2rem;
+   }
+   .alertSection > P {
+      color: #222222;
+      font-size: 1.5rem;
+   }
+   .alertSection > a {
+      font-size: 1.2rem;
+   }
+   .headerCheckPay > div.box {
+      width: 10%;
+   }
+}
+@media  (max-width:576px) {
+   .alertSection {
+      width: 90%;
+   }
+   .alertSection > h4 {
+      font-size: 1.5rem;
+   }
+   .alertSection > P {
+      color: #222222;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+   }
+   .alertSection > a {
+      font-size: 1rem;
+   }
+   .headerCheckPay > div.box {
+      width: 15%;
+   }
+}
