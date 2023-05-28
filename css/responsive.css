@@ -360,6 +360,13 @@
    .alertBox > div > p {
       font-size: 1.2rem;
    }
+   .totalSum > form {
+      width: 90%;
+   }
+   button.total {
+      font-size: 1.5rem;
+   }
+
 }
 @media  (max-width:576px) {
    .alertSection {
@@ -400,6 +407,9 @@
    }
    input[type="number"].number {
       width: 40% !important;
+   }
+   .totalSum > form {
+      width: 80%;
    }
 }
 @media screen and (max-width:992px) {
