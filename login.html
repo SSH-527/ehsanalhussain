@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ehsanalhussain-login</title>
     <!-- css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -13,26 +15,49 @@
 <!-- code -->
 <body class="loginPage">
     <div class="container">
-       <div class="row">
-        <div class="col-lg-6 col-sm-12 maintitle">
-            <h2 class="pageTitle"> ورود کاربر</h2>
-            <h6 class="subTitle"> به احسان الحسین خوش آمدید.</h6>
+        <div class="row alertBox">
+            <!-- diffrrent styles of alerts are added to the following div -->
+            <div class="col-lg-6 col-sm-12 alertJS" role="alert">
+                <p> متن آزمایشی پیغام سایت</p>
+            </div>
         </div>
-       </div>
     </div>
     <div class="container">
         <div class="row">
-         <div class="col-lg-6 col-sm-12 loginForm login">
+            <div class="col-lg-6 col-sm-12 maintitle">
+                <h2 class="pageTitle"> ورود کاربر</h2>
+                <h6 class="subTitle"> به احسان الحسین خوش آمدید.</h6>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 loginForm login">
                 <form method="post">
                     <label class="col-lg-6 col-sm-12 label" for="number">شماره همراه :</label>
-                    <input class="col-lg-6 col-sm-12 textInput" type="text" id="number" name="number" placeholder="09** *** ** **" dir="ltr" required>
+                    <input class="col-lg-6 col-sm-12 textInput" type="number" id="number" name="number"
+                        placeholder="09** *** ** **" dir="ltr" required>
                     <button class="col-lg-6 col-sm-12 loginButton">ورود</button>
                 </form>
                 <span>حساب کاربری ندارید ؟ <a href="sign up.html"> ساخت حساب</a></span>
-         </div>
+            </div>
         </div>
-     </div>
+    </div>
     <!-- js -->
-    <script src="js/javascript.js"></script>
-    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            window.setTimeout(function () {
+                $(".alertJS").fadeTo(1000, 0).slideUp(1000, function () {
+                    $(this).remove();
+                });
+            }, 5000);
+
+        });
+    </script>
+    <script src="js/inputs.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ehsanalhussain-user panel</title>
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- the jquery cdn in this page should be placed in head -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+</head>
+
+<!-- code -->
+<body class="panel container">
+    <div class="container dashboard" id="mainContent">
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 box panelItem">
+                <i class="fa fa-times cross" aria-hidden="true"></i>
+                <div class="boxImg col-lg-4 col-sm-12">
+                    <img src="image/user.png" alt="user image" class="pic-1 userImage">
+                </div>
+                <h6>کیان کاظمی</h6>
+                <p> سطح دسترسی : <span> کاربر</span></p>
+                <hr>
+                <div class="list">
+                    <ul>
+                        <li class="tabItem"> <a href="user panel - profile.html">پروفایل کاربر</a></li>
+                        <li class="tabItem active"> <a href="#">هزینه ها</a></li>
+                        <li class="tabItem"> <a href="user panel -transactions.html"> تراکنش ها</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="iconSection col-lg-12 col-sm-12">
+                    <div class="col-lg-1 col-sm-1 mobileMenu">
+                        <i class="fa fa-bars menuIcon" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-lg-1 col-sm-1 exit exitBtn">
+                        <img src="image/exit.png" alt="exit" title="خروج">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content activeContent box">
+                        <form method="post">
+                            <!-- render cost -->
+                                <!-- any cost -->
+                                <div class="container marginSection cost">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-12">
+                                            <div class="costItem ">
+                                                <img src="image/food.png">
+                                                <h5 class="title">غذا</h5>
+                                                <p class="costItemDesc">متن آزمایشی متن آزمایشی
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="costFeature col-lg-8 col-sm-12">
+                                            <div class="feature col-sm-12">
+                                                <h6>قیمت هر سهم :</h6>
+                                                <span class="price" id="price_1">100</span>
+                                                <span class="rial" style="color: #1a8acc;">ریال</span>
+                                            </div>
+                                            <div class="feature">
+                                                <h6 class="col-sm-2">تعداد :</h6>
+                                                <div class="units col-lg-4 col-sm-8">
+                                                    <div class="btnNumber plus col-lg-1 col-sm-2" id="price_1">+</div>
+                                                    <input type="number" value="0"
+                                                        class="number col-lg-5 col-sm-8 desired" min="0" id="price_1" readonly>
+                                                    <div class="btnNumber minus col-lg-1 col-sm-4" id="price_1">-</div>
+                                                </div>
+                                            </div>
+                                            <div class="feature">
+                                                <h6>مبلغ دلخواه :</h6>
+                                                <input type="number" class="desired myPay" value="0" id="price_1">
+                                                <span class="rial">ریال</span>
+                                            </div>
+                                            <div class="feature">
+                                                <h6> مجموع :</h6>
+                                                <input type="number" class="sum spInput" value="0" id="price_1"
+                                                    readonly>
+                                                <span class="rial">ریال</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end any cost -->
+                                <div class="container marginSection cost">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-12">
+                                            <div class="costItem ">
+                                                <img src="image/food.png" alt="${cost.name}">
+                                                <h5 class="title">غذا</h5>
+                                                <p class="costItemDesc">متن آزمایشی متن آزمایشی
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="costFeature col-lg-8 col-sm-12">
+                                            <div class="feature col-sm-12">
+                                                <h6>قیمت هر سهم :</h6>
+                                                <span class="price" id="price_2">400</span>
+                                                <span class="rial" style="color: #1a8acc;">ریال</span>
+                                            </div>
+                                            <div class="feature">
+                                                <h6 class="col-sm-2">تعداد :</h6>
+                                                <div class="units col-lg-4 col-sm-8">
+                                                    <div class="btnNumber plus col-lg-1 col-sm-2" id="price_2">+</div>
+                                                    <input type="number" value="0"
+                                                        class="number col-lg-5 col-sm-8 desired" min="0" id="price_2" readonly >
+                                                    <div class="btnNumber minus col-lg-1 col-sm-4" id="price_2">-</div>
+                                                </div>
+                                            </div>
+                                            <div class="feature">
+                                                <h6>مبلغ دلخواه :</h6>
+                                                <input type="number" class="desired myPay" value="0" id="price_2">
+                                                <span class="rial">ریال</span>
+                                            </div>
+                                            <div class="feature">
+                                                <h6> مجموع :</h6>
+                                                <input type="number" class="sum spInput" value="0" id="price_2" readonly>
+                                                <span class="rial">ریال</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container marginSection cost">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-12">
+                                            <div class="costItem ">
+                                                <img src="image/food.png" alt="${cost.name}">
+                                                <h5 class="title">غذا</h5>
+                                                <p class="costItemDesc">متن آزمایشی
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="costFeature col-lg-8 col-sm-12">
+                                            <div class="feature col-sm-12">
+                                                <h6>قیمت هر سهم :</h6>
+                                                <span class="price" id="price_3">800</span>
+                                                <span class="rial" style="color: #1a8acc;">ریال</span>
+                                            </div>
+                                            <div class="feature">
+                                                <h6 class="col-sm-2">تعداد :</h6>
+                                                <div class="units col-lg-4 col-sm-8">
+                                                    <div class="btnNumber plus col-lg-1 col-sm-2" id="price_3">+</div>
+                                                    <input type="number" value="0"
+                                                        class="number col-lg-5 col-sm-8 desired" min="0" id="price_3" readonly>
+                                                    <div class="btnNumber minus col-lg-1 col-sm-4" id="price_3">-</div>
+                                                </div>
+                                            </div>
+                                            <div class="feature">
+                                                <h6>مبلغ دلخواه :</h6>
+                                                <input type="number" class="desired myPay" value="0" id="price_3">
+                                                <span class="rial">ریال</span>
+                                            </div>
+                                            <div class="feature">
+                                                <h6> مجموع :</h6>
+                                                <input type="number" class="sum spInput" value="0" id="price_3" readonly>
+                                                <span class="rial">ریال</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            <!-- end render cost -->
+                            <!-- total section -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 col-sm-12 totalSum">
+                                        <h6>مجموع کل :</h6>
+                                        <input type="number" class="totalSumField spInput col-lg-4 col-sm-2" id="total" value="0"
+                                            readonly>
+                                        <button class="col-lg-4 col-sm-12" id="checkTable" type="submit">پرداخت</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end total section -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popupWrapper"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-11 popup">
+                <h4>خروج از حساب کاربری </h4>
+                <p>آیا میخواهید از حساب کاربری خود خارج شوید ؟</p>
+                <div>
+                    <button class="closePopup">بستن</button>
+                    <form class="exitUser">
+                        <button class="btnClose" type="submit">خروج</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <script>
+        $(function () {
+            var total_sum = function () {
+                var sum = 0;
+                $('.sum').each(function () {
+                    var num = $(this).val();
+                    if (num != 0) {
+                        sum += parseInt(num);
+                    }
+                });
+                $('#total').val(sum);
+
+            }
+        $('.plus').click(function () {
+            if ($(this).next().val()) {
+                $(this).next().val(+$(this).next().val() + 1);
+            }
+            var quantity = $(this).next().val();
+            var id=$(this).attr('id');
+            var multy = $('#'+id).text();
+            multy = multy * quantity;
+            console.log(multy);
+            $('input.sum'+'#'+id).val(multy);
+            $('input.myPay'+"#"+id).val(0);
+            total_sum();
+        });
+        $('.minus').click(function () {
+            if ($(this).prev().val() > 0) {
+                if ($(this).prev().val() > 0) $(this).prev().val(+$(this).prev().val() - 1);
+            }
+            var quantity = $(this).prev().val();
+            var id=$(this).attr('id');
+            var multy = $('#'+id).text();
+            multy = multy * quantity;
+            console.log(multy);
+            $('input.sum'+'#'+id).val(multy);
+            $('input.myPay'+"#"+id).val(0);
+            total_sum();
+        });
+        $('.myPay').keyup(function(){
+            var myPay=$(this).val();
+            var id=$(this).attr('id');
+            if( myPay == ''){
+                $(this).val(0);
+                myPay=0;
+                $('input.sum'+'#'+id).val(myPay);
+            }
+            $('input.number'+'#'+id).val(0);
+            $('input.sum'+'#'+id).val(myPay);
+            total_sum();
+        })
+    })
+    </script>
+</body>
+
+</html>

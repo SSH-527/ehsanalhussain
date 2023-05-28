@@ -11,6 +11,16 @@
 </head>
 <!-- code -->
 <body class="loginPage">
+    <!-- alert box -->
+    <div class="container">
+        <div class="row alertBox">
+            <!-- diffrrent styles of alerts are added to the following div -->
+            <div class="col-lg-6 col-sm-12 alertJS" role="alert">
+                <p> متن آزمایشی پیغام سایت</p>
+            </div>
+        </div>
+    </div>
+    <!-- end alert box -->
     <div class="container">
         <div class="row">
          <div class="col-lg-6 col-sm-12 maintitle signup">
@@ -28,7 +38,7 @@
                      <label class="col-lg-6 col-sm-12 label" for="lastName"> نام خانوادگی :</label>
                      <input class="col-lg-6 col-sm-12 textInput" type="text" id="lastName" placeholder=" نام خانوادگی خود را وارد کنید." required>
                      <label class="col-lg-6 col-sm-12 label" for="number">شماره همراه :</label>
-                     <input class="col-lg-6 col-sm-12 textInput" type="text" id="number" name="number" placeholder="09** *** ** ** " dir="ltr" required>
+                     <input class="col-lg-6 col-sm-12 textInput" type="number" id="number" name="number" placeholder="09** *** ** ** " dir="ltr" required>
                      <button class="col-lg-6 col-sm-12 loginButton">ساخت حساب</button>
                  </form>
                  <span>حساب کاربری دارید ؟ <a href="login.html"> ورود </a></span>
@@ -37,6 +47,19 @@
     </div>
 
     <!-- js -->
-    <script src="js/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+         
+        window.setTimeout(function() {
+            $(".alertJS").fadeTo(1000, 0).slideUp(1000, function(){
+                $(this).remove(); 
+            });
+        }, 5000);
+         
+        });
+    </script>
+    <script src="js/inputs.js"></script>
 </body>
 </html>
