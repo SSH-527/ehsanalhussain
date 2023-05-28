@@ -61,13 +61,20 @@
                                     <form method="post" class="col-lg-12 col-sm-12 editCostForm" id="newCost">
                                         <div class="container">
                                             <div class="row editFeauter">
-                                                <div class="col-lg-5 col-sm-12">
-                                                    <label class="active">فعال :</label>
-                                                    <input type="radio" value="on" name="status" checked="checked"
-                                                        class="col-lg-1 col-sm-6">
-                                                    <label class="active">غیرفعال :</label>
-                                                    <input type="radio" value="off" name="status"
-                                                        class="col-lg-1 col-sm-6">
+                                                <div class="row editFeauter" style="justify-content: space-between;">
+                                                    <div class="col-lg-6 col-sm-12">
+                                                        <label for="titleCost" class="active"> عنوان هزینه :</label>
+                                                        <input type="text" value="غذا" id="titleCost" name="titleCost"
+                                                            class="col-lg-5 col-sm-12 costPrice">
+                                                    </div>
+                                                    <div class="col-lg-5 col-sm-12">
+                                                        <label class="active">فعال :</label>
+                                                        <input type="radio" value="on" name="status" checked="checked"
+                                                            class="col-lg-1 col-sm-6">
+                                                        <label class="active">غیرفعال :</label>
+                                                        <input type="radio" value="off" name="status"
+                                                            class="col-lg-1 col-sm-6">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
