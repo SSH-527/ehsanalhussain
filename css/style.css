@@ -1246,3 +1246,20 @@ button.total {
 }
 
 /*---- end alert style--------*/
+.nothing {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+	background-color: #f5f5f5;
+}
+.nothing > p {
+	margin-bottom: 0;
+	line-height: 1.5rem;
+	text-align: justify;
+}
+.totalSum > a {
+	color: #AFAFAF;
+	margin-bottom: 1.5rem;
+	font-size: 0.9rem;
+}
