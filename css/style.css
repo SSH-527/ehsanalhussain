@@ -425,7 +425,7 @@ div.list>ul>li>a {
 	border-radius: 5px;
 }
 
-input[type="number"].number {
+input[type="text"].number {
 	width: 80% !important;
 	margin: 0 0.4rem;
 }
@@ -1262,4 +1262,137 @@ button.total {
 	color: #AFAFAF;
 	margin-bottom: 1.5rem;
 	font-size: 0.9rem;
+}
+.mySlides > img {
+	border-radius: 10px;
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+.mySlides {display: none} 
+.mySlides > img {
+	width: 100%;
+	border-radius: 5px;
+	margin: 0.8rem auto;
+	height: 150px;
+}
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+#images {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+#images > img {
+	width:40%;
+	margin: 0 auto;
+}
+figure {
+	width: 45%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+figcaption {
+	font-size: 0.8rem;
+	color: #AFAFAF;
+	text-align: center;
+	margin-top: 0.5rem;
+	word-wrap: break-word;
+	width: 50%;
+}
+img.preview {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 10px;
+	transition: transform 0.8s;
+}
+img.preview:hover {
+	transform: scale(1.01);
+}
+span.deleteImg {
+	color: #d63838;
+	font-size: 0.8rem;
+	text-align: center;
+	margin: 0.5rem 0.7rem 0 0.7rem;
+	cursor: pointer;
+}
+div.action {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+label.editImg {
+	color: #1A8ACC;
+	font-size: 0.8rem;
+	text-align: center;
+	margin: 0.5rem 0.7rem 0 0.7rem;
+	cursor: pointer;
+}
+div.residenceImg {
+	display: flex !important;
+	
+}
+label.picturs {
+	margin-top: 1.5rem;
+}
+.residenceImg>img {
+	object-fit: cover;
+	margin-bottom: 1rem;
+}
+.newRes {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.newRes > p {
+	font-size: 0.8rem;
+	color: #AFAFAF;
+	margin: 0.3rem 0;
+}
+div.newImg {
+	padding: 1.5rem;
+	border: 1px solid #DCDCDC;
+	border-radius: 5px;
+	margin: 1.5rem auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+div.newImg> p {
+	color: #AFAFAF;
+	font-size: 0.8rem	
+}
+div.newImg>img {
+	border-radius: 5px;
+	width: 100%;
+	object-fit: fill;
+}
+div.resImgEdit {
+	display: flex;
+	
+}
+div.resImgEdit > img {
+	height: 150px;
+}
+div.resImgEdit > p {
+	font-size: 0.8rem;
+    color: #AFAFAF;
+    text-align: center;
+    margin-top: 0.5rem;
+    word-wrap: break-word;
+    width: 50%;
+}
+select.inputActive {
+	margin-top: 0;
 }

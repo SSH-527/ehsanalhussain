@@ -57,7 +57,19 @@
       margin-top: 45px;
    }
    .boxImg > img {
+      width: 30% !important;
+   }
+   .profileImg > img {
       width: 70% !important;
+   }
+   .costSlide > img {
+      height: 200px;
+   }
+   .costSlide {
+      margin: 0 0.5rem;
+   }
+   select.inputActive {
+      width: 85%;
    }
    
 }
@@ -421,6 +433,15 @@
    }
    input[type="number"].number {
       width: 40% !important;
+   }
+   figure {
+      width: 100%;
+   }
+   #images {
+      margin: 0 auto;
+   }
+   div.residenceImg {
+      flex-direction: column;
    }
    
 }

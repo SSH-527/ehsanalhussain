@@ -43,9 +43,9 @@
                         <img src="image/exit.png" alt="exit" title="خروج">
                     </div>
                 </div>
-                
+
                 <div class="box">
-                    <div class="content activeContent box exitCost" >
+                    <div class="content activeContent box exitCost">
                         <div class="panelAlert">
                             <div class="container">
                                 <div class="row alertBox">
@@ -70,16 +70,16 @@
                                         <tr>
                                             <td>1</td>
                                             <td>
-                                               <div>
-                                                <img src="image/food.png">
-                                               </div>
+                                                <div>
+                                                    <img src="image/food.png">
+                                                </div>
                                             </td>
                                             <td> غذا</td>
                                             <td>100000</td>
                                             <td>
-                                               <div class="pill">
-                                                <span class="pill-active">فعال</span>
-                                               </div>
+                                                <div class="pill">
+                                                    <span class="pill-active">فعال</span>
+                                                </div>
                                             </td>
                                             <td>
                                                 <a href="cost-edit (food).html">
@@ -99,7 +99,7 @@
                                             <td>
                                                 <div class="pill">
                                                     <span class="pill-passive">غیرفعال</span>
-                                                   </div>
+                                                </div>
                                             </td>
                                             <td>
                                                 <a href="cost-edit (hotel).html">
@@ -140,26 +140,32 @@
                                                     <input type="text" value="" name="price"
                                                         class="col-lg-6 col-sm-12 costPrice">
                                                 </div>
-                                                <div class="col-lg-6 col-sm-12">
-                                                    <label class="active">انتخاب تصویر شاخص :</label>
-                                                    <input type="file" hidden id="newCostImg" value="" name="costImg">
-                                                    <div class="fileBtn col-lg-12 col-sm-12">
-                                                        <button id="customBtnNewCost"
-                                                            class="col-lg-12 col-sm-12 chooseFile"
-                                                            onclick="activeNewCostImg()" type="button">انتخاب
-                                                            فایل</button>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-12 col-sm-12">
-                                                <div class="newImg">
-                                                    <img src="image/placeholderimg.png" class="pic-preview">
-                                                    <div class="fileName col-lg-12 col-sm-4">
-                                                        <p id="fileNameNewCost"></p>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             </div>
                                         </div>
+                                        <div class="container">
+                                            <div class="row editFeauter" style="justify-content: space-between;">
+                                                <label class="active picturs">انتخاب تصاویر :</label>
+                                                <div class="col-lg-12 col-sm-12 ">
+                                                    <div class="newImg newRes col-lg-12 col-sm-12">
+                                                        <p id="num-of-files"> </p>
+
+                                                        <div id="images" class="col-lg-4">
+                                                            <img src="image/gallery.png">
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-12">
+                                                            <label class="active labelFile" for="input-files">انتخاب
+                                                                تصاویر
+                                                            </label>
+                                                            <input type="file" name="files[]" hidden id="input-files"
+                                                                multiple accept="image/jpeg, image/png,"
+                                                                onchange="preview()">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="container">
                                             <div class="row editFeauter">
                                                 <div class="col-lg-12 col-sm-12">
@@ -177,7 +183,6 @@
                                             </div>
                                         </div>
                                     </form>
-
                                 </div>
                             </div>
                         </div>
@@ -205,18 +210,28 @@
         <script src="js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script type="text/javascript">
+            $(document).ready(function () {
 
-        $(document).ready(function () {
+                window.setTimeout(function () {
+                    $(".panelAlert").fadeTo(1000, 0).slideUp(1000, function () {
+                        $(this).remove();
+                    });
+                }, 5000);
 
-            window.setTimeout(function () {
-                $(".panelAlert").fadeTo(1000, 0).slideUp(1000, function () {
-                    $(this).remove();
-                });
-            }, 5000);
-
-        });
-    </script>
-
+            });
+        </script>
+        <script src="js/residence.js"></script>
+        <script>
+            $(document).on("click", ".deleteImg", function (e) {
+                var numImg = $(".deleteImg").length;
+                if (numImg == 1) {
+                    alert("حداقل یک تصویر باید باشد.")
+                } else {
+                    e.preventdefault;
+                    $(this).parents('figure').remove();
+                }
+            });
+        </script>
 </body>
 
 </html>

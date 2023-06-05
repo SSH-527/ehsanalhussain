@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <!-- code -->
+
 <body class="panel container">
     <div class="container dashboard" id="mainContent">
         <div class="row">
@@ -51,12 +52,13 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="userImg col-lg-12 col-sm-12">
-                                            <div class="boxImg col-lg-3 col-sm-2">
+                                            <div class="boxImg profileImg col-lg-3 col-sm-2">
                                                 <img src="image/user.png" alt="user image" class="pic-2"
                                                     style="width: 100%;">
                                             </div>
                                             <div class="customInputFile col-lg-12">
-                                                <input type="file" hidden id="defaultImgUser" onchange="previewFile()" class="defualt" value="">
+                                                <input type="file" hidden id="defaultImgUser" onchange="previewFile()"
+                                                    class="defualt" value="">
                                                 <div class="fileBtn col-lg-4">
                                                     <button id="customBtn" class="col-lg-4 col-sm-12" onclick="active()"
                                                         type="button">انتخاب فایل</button>
@@ -71,11 +73,13 @@
                                 <div class="row profileSection">
                                     <div class="col-lg-6 profileItem">
                                         <label for="firstNameEdit">نام :</label>
-                                        <input type="text" id="firstNameEdit" class="col-lg-12 inputActive" value="کیان">
+                                        <input type="text" id="firstNameEdit" class="col-lg-12 inputActive"
+                                            value="کیان">
                                     </div>
                                     <div class="col-lg-6 profileItem">
                                         <label for="lastNameEdit">نام خانوادگی:</label>
-                                        <input type="text" id="lastNameEdit" class="col-lg-12 inputActive" value="کاظمی">
+                                        <input type="text" id="lastNameEdit" class="col-lg-12 inputActive"
+                                            value="کاظمی">
                                     </div>
                                 </div>
                             </div>
@@ -83,11 +87,59 @@
                                 <div class="row">
                                     <div class="col-lg-6 profileItem">
                                         <label for="numberEdit">شماره همراه :</label>
-                                        <input type="text" id="numberEdit" class="col-lg-12  disableInput" value="09140248135" readonly>
+                                        <input type="text" id="numberEdit" class="col-lg-12  disableInput"
+                                            value="09140248135" readonly>
                                     </div>
                                     <div class="col-lg-6 profileItem">
-                                        <label for="personIDEdit">کدملی :</label>
-                                        <input type="text" id="personIDEdit" class="col-lg-12 inputActive" value="0002145789654">
+                                        <label for="personIDEdit">استان :</label>
+                                        <select class="inputActive" name="province_id" v-model="province"
+                                            @change="getAllCities()">
+                                            <option>استان را انتخاب کنید</option>
+                                            <option value="1">آذربایجان شرقی</option>
+                                            <option value="2">آذربایجان غربی</option>
+                                            <option value="3">اردبیل</option>
+                                            <option value="4">اصفهان</option>
+                                            <option value="5">البرز</option>
+                                            <option value="6">ایلام</option>
+                                            <option value="7">بوشهر</option>
+                                            <option value="8">تهران</option>
+                                            <option value="9">چهارمحال بختیاری</option>
+                                            <option value="10">خراسان جنوبی</option>
+                                            <option value="11">خراسان رضوی</option>
+                                            <option value="12">خراسان شمالی</option>
+                                            <option value="13">خوزستان</option>
+                                            <option value="14">زنجان</option>
+                                            <option value="15">سمنان</option>
+                                            <option value="16">سیستان و بلوچستان</option>
+                                            <option value="17">فارس</option>
+                                            <option value="18">قزوین</option>
+                                            <option value="19">قم</option>
+                                            <option value="20">کردستان</option>
+                                            <option value="21">کرمان</option>
+                                            <option value="22">کرمانشاه</option>
+                                            <option value="23">کهکیلویه و بویراحمد</option>
+                                            <option value="24">گلستان</option>
+                                            <option value="25">گیلان</option>
+                                            <option value="26">لرستان</option>
+                                            <option value="27">مازندران</option>
+                                            <option value="28">مرکزی</option>
+                                            <option value="29">هرمزگان</option>
+                                            <option value="30">همدان</option>
+                                            <option value="31">یزد</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 profileItem">
+                                        <label for="personIDEdit">شهر :</label>
+                                        <select class="inputActive" name="" v-model="">
+                                            <option>شهر خود را انتخاب کنید</option>
+                                            <option>کرج</option>
+                                            <option>اسلامشهر</option>
+                                            <option>کاشان</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

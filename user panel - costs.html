@@ -19,6 +19,7 @@
 </head>
 
 <!-- code -->
+
 <body class="panel container">
     <div class="container dashboard" id="mainContent">
         <div class="row">
@@ -51,132 +52,156 @@
                     <div class="content activeContent box">
                         <form method="post">
                             <!-- render cost -->
-                                <!-- any cost -->
-                                <div class="container marginSection cost">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-sm-12">
-                                            <div class="costItem ">
-                                                <img src="image/food.png">
-                                                <h5 class="title">غذا</h5>
-                                                <p class="costItemDesc">متن آزمایشی متن آزمایشی
-                                                </p>
+                            <!-- any cost -->
+                            <div class="container marginSection cost">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-12">
+                                        <div class="costItem slideshow-container" data-cycle="2000">
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/food1.png">
+                                            </div>
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/food2.png">
+                                            </div>
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/food3.png">
+                                            </div>
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/food4.png">
+                                            </div>
+                                            <h5 class="title">غذا</h5>
+                                            <p class="costItemDesc">متن آزمایشی متن آزمایشی
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="costFeature col-lg-8 col-sm-12">
+                                        <div class="feature col-sm-12">
+                                            <h6>قیمت هر سهم :</h6>
+                                            <span class="price" id="price_1">100</span>
+                                            <span class="rial" style="color: #1a8acc;">ریال</span>
+                                        </div>
+                                        <div class="feature">
+                                            <h6 class="col-sm-2">تعداد :</h6>
+                                            <div class="units col-lg-4 col-sm-8">
+                                                <div class="btnNumber plus col-lg-1 col-sm-2" id="price_1">+</div>
+                                                <input type="text" value="0" class="number col-lg-5 col-sm-8 desired"
+                                                    min="0" id="price_1" onkeyup="toEnglishNumber(this.value,'price_1');">
+                                                <div class="btnNumber minus col-lg-1 col-sm-4" id="price_1">-</div>
                                             </div>
                                         </div>
-                                        <div class="costFeature col-lg-8 col-sm-12">
-                                            <div class="feature col-sm-12">
-                                                <h6>قیمت هر سهم :</h6>
-                                                <span class="price" id="price_1">100</span>
-                                                <span class="rial" style="color: #1a8acc;">ریال</span>
-                                            </div>
-                                            <div class="feature">
-                                                <h6 class="col-sm-2">تعداد :</h6>
-                                                <div class="units col-lg-4 col-sm-8">
-                                                    <div class="btnNumber plus col-lg-1 col-sm-2" id="price_1">+</div>
-                                                    <input type="number" value="0"
-                                                        class="number col-lg-5 col-sm-8 desired" min="0" id="price_1" readonly>
-                                                    <div class="btnNumber minus col-lg-1 col-sm-4" id="price_1">-</div>
-                                                </div>
-                                            </div>
-                                            <div class="feature">
-                                                <h6>مبلغ دلخواه :</h6>
-                                                <input type="number" class="desired myPay" value="0" id="price_1">
-                                                <span class="rial">ریال</span>
-                                            </div>
-                                            <div class="feature">
-                                                <h6> مجموع :</h6>
-                                                <input type="number" class="sum spInput" value="0" id="price_1"
-                                                    readonly>
-                                                <span class="rial">ریال</span>
-                                            </div>
+                                        <div class="feature">
+                                            <h6>مبلغ دلخواه :</h6>
+                                            <input type="text" class="desired myPay" value="0" id="price_1" onkeyup="toEnglishNumber(this.value,'price_1');">
+                                            <span class="rial">ریال</span>
+                                        </div>
+                                        <div class="feature">
+                                            <h6> مجموع :</h6>
+                                            <input type="text" class="sum spInput" value="0" id="price_1" readonly onchange="toEnglishNumber(this.value,'price_1');"> 
+                                            <span class="rial">ریال</span>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end any cost -->
-                                <div class="container marginSection cost">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-sm-12">
-                                            <div class="costItem ">
-                                                <img src="image/food.png" alt="${cost.name}">
-                                                <h5 class="title">غذا</h5>
-                                                <p class="costItemDesc">متن آزمایشی متن آزمایشی
-                                                </p>
+                            </div>
+                            <!-- end any cost -->
+                            <div class="container marginSection cost">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-12">
+                                        <div class="costItem slideshow-container" data-cycle="2000">
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/hotel1.png">
+                                            </div>
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/hotel2.png">
+                                            </div>
+                                            <h5 class="title">اسکان</h5>
+                                            <p class="costItemDesc">متن آزمایشی متن آزمایشی
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="costFeature col-lg-8 col-sm-12">
+                                        <div class="feature col-sm-12">
+                                            <h6>قیمت هر سهم :</h6>
+                                            <span class="price" id="price_2">400</span>
+                                            <span class="rial" style="color: #1a8acc;">ریال</span>
+                                        </div>
+                                        <div class="feature">
+                                            <h6 class="col-sm-2">تعداد :</h6>
+                                            <div class="units col-lg-4 col-sm-8">
+                                                <div class="btnNumber plus col-lg-1 col-sm-2" id="price_2">+</div>
+                                                <input type="text" value="0" class="number col-lg-5 col-sm-8 desired"
+                                                    min="0" id="price_2" onkeyup="toEnglishNumber(this.value,'price_2');">
+                                                <div class="btnNumber minus col-lg-1 col-sm-4" id="price_2">-</div>
                                             </div>
                                         </div>
-                                        <div class="costFeature col-lg-8 col-sm-12">
-                                            <div class="feature col-sm-12">
-                                                <h6>قیمت هر سهم :</h6>
-                                                <span class="price" id="price_2">400</span>
-                                                <span class="rial" style="color: #1a8acc;">ریال</span>
-                                            </div>
-                                            <div class="feature">
-                                                <h6 class="col-sm-2">تعداد :</h6>
-                                                <div class="units col-lg-4 col-sm-8">
-                                                    <div class="btnNumber plus col-lg-1 col-sm-2" id="price_2">+</div>
-                                                    <input type="number" value="0"
-                                                        class="number col-lg-5 col-sm-8 desired" min="0" id="price_2" readonly >
-                                                    <div class="btnNumber minus col-lg-1 col-sm-4" id="price_2">-</div>
-                                                </div>
-                                            </div>
-                                            <div class="feature">
-                                                <h6>مبلغ دلخواه :</h6>
-                                                <input type="number" class="desired myPay" value="0" id="price_2">
-                                                <span class="rial">ریال</span>
-                                            </div>
-                                            <div class="feature">
-                                                <h6> مجموع :</h6>
-                                                <input type="number" class="sum spInput" value="0" id="price_2" readonly>
-                                                <span class="rial">ریال</span>
-                                            </div>
+                                        <div class="feature">
+                                            <h6>مبلغ دلخواه :</h6>
+                                            <input type="text" class="desired myPay" value="0" id="price_2" onkeyup="toEnglishNumber(this.value,'price_2');">
+                                            <span class="rial">ریال</span>
+                                        </div>
+                                        <div class="feature">
+                                            <h6> مجموع :</h6>
+                                            <input type="text" class="sum spInput" value="0" id="price_2" readonly onchange="toEnglishNumber(this.value,'price_2');">
+                                            <span class="rial">ریال</span>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="container marginSection cost">
-                                    <div class="row">
-                                        <div class="col-lg-4 col-sm-12">
-                                            <div class="costItem ">
-                                                <img src="image/food.png" alt="${cost.name}">
-                                                <h5 class="title">غذا</h5>
-                                                <p class="costItemDesc">متن آزمایشی
-                                                </p>
+                            </div>
+                            <div class="container marginSection cost">
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-12">
+                                        <div class="costItem slideshow-container" data-cycle="2000">
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/food3.png">
+                                            </div>
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/hotel3.png">
+                                            </div>
+                                            <div class="mySlides costSlide col-lg-12">
+                                                <img src="image/food4.png">
+                                            </div>
+                                            <h5 class="title">غذا</h5>
+                                            <p class="costItemDesc">متن آزمایشی
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="costFeature col-lg-8 col-sm-12">
+                                        <div class="feature col-sm-12">
+                                            <h6>قیمت هر سهم :</h6>
+                                            <span class="price" id="price_3">800</span>
+                                            <span class="rial" style="color: #1a8acc;">ریال</span>
+                                        </div>
+                                        <div class="feature">
+                                            <h6 class="col-sm-2">تعداد :</h6>
+                                            <div class="units col-lg-4 col-sm-8">
+                                                <div class="btnNumber plus col-lg-1 col-sm-2" id="price_3">+</div>
+                                                <input type="text" value="0" class="number col-lg-5 col-sm-8 desired"
+                                                    min="0" id="price_3" onkeyup="toEnglishNumber(this.value,'price_3');">
+                                                <div class="btnNumber minus col-lg-1 col-sm-4" id="price_3">-</div>
                                             </div>
                                         </div>
-                                        <div class="costFeature col-lg-8 col-sm-12">
-                                            <div class="feature col-sm-12">
-                                                <h6>قیمت هر سهم :</h6>
-                                                <span class="price" id="price_3">800</span>
-                                                <span class="rial" style="color: #1a8acc;">ریال</span>
-                                            </div>
-                                            <div class="feature">
-                                                <h6 class="col-sm-2">تعداد :</h6>
-                                                <div class="units col-lg-4 col-sm-8">
-                                                    <div class="btnNumber plus col-lg-1 col-sm-2" id="price_3">+</div>
-                                                    <input type="number" value="0"
-                                                        class="number col-lg-5 col-sm-8 desired" min="0" id="price_3" readonly>
-                                                    <div class="btnNumber minus col-lg-1 col-sm-4" id="price_3">-</div>
-                                                </div>
-                                            </div>
-                                            <div class="feature">
-                                                <h6>مبلغ دلخواه :</h6>
-                                                <input type="number" class="desired myPay" value="0" id="price_3">
-                                                <span class="rial">ریال</span>
-                                            </div>
-                                            <div class="feature">
-                                                <h6> مجموع :</h6>
-                                                <input type="number" class="sum spInput" value="0" id="price_3" readonly>
-                                                <span class="rial">ریال</span>
-                                            </div>
+                                        <div class="feature">
+                                            <h6>مبلغ دلخواه :</h6>
+                                            <input type="text" class="desired myPay" value="0" id="price_3"
+                                                pattern="[0-9]*" inputmode="numeric"
+                                                onkeyup="toEnglishNumber(this.value,'price_3');">
+                                            <span class="rial">ریال</span>
+                                        </div>
+                                        <div class="feature">
+                                            <h6> مجموع :</h6>
+                                            <input type="text" class="sum spInput" value="0" id="price_3" readonly onchange="toEnglishNumber(this.value,'price_3');">
+                                            <span class="rial">ریال</span>
                                         </div>
                                     </div>
                                 </div>
-                            
+                            </div>
                             <!-- end render cost -->
                             <!-- total section -->
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12 col-sm-12 totalSum">
                                         <h6>مجموع کل :</h6>
-                                        <input type="number" class="totalSumField spInput col-lg-4 col-sm-2" id="total" value="0"
-                                            readonly>
+                                        <input type="text" class="totalSumField spInput col-lg-4 col-sm-2" id="total"
+                                            value="0" readonly onchange="toEnglishNumber(this.value,'total');">
                                         <button class="col-lg-4 col-sm-12" id="checkTable" type="submit">پرداخت</button>
                                     </div>
                                 </div>
@@ -216,47 +241,107 @@
                     }
                 });
                 $('#total').val(sum);
-
             }
-        $('.plus').click(function () {
-            if ($(this).next().val()) {
-                $(this).next().val(+$(this).next().val() + 1);
-            }
-            var quantity = $(this).next().val();
-            var id=$(this).attr('id');
-            var multy = $('#'+id).text();
-            multy = multy * quantity;
-            console.log(multy);
-            $('input.sum'+'#'+id).val(multy);
-            $('input.myPay'+"#"+id).val(0);
-            total_sum();
-        });
-        $('.minus').click(function () {
-            if ($(this).prev().val() > 0) {
-                if ($(this).prev().val() > 0) $(this).prev().val(+$(this).prev().val() - 1);
-            }
-            var quantity = $(this).prev().val();
-            var id=$(this).attr('id');
-            var multy = $('#'+id).text();
-            multy = multy * quantity;
-            console.log(multy);
-            $('input.sum'+'#'+id).val(multy);
-            $('input.myPay'+"#"+id).val(0);
-            total_sum();
-        });
-        $('.myPay').keyup(function(){
-            var myPay=$(this).val();
-            var id=$(this).attr('id');
-            if( myPay == ''){
-                $(this).val(0);
-                myPay=0;
-                $('input.sum'+'#'+id).val(myPay);
-            }
-            $('input.number'+'#'+id).val(0);
-            $('input.sum'+'#'+id).val(myPay);
-            total_sum();
+            $('.plus').click(function () {
+                if ($(this).next().val()) {
+                    $(this).next().val(+$(this).next().val() + 1);
+                }
+                var quantity = $(this).next().val();
+                var id = $(this).attr('id');
+                var multy = $('#' + id).text();
+                multy = multy * quantity;
+                console.log(multy);
+                $('input.sum' + '#' + id).val(multy);
+                $('input.myPay' + "#" + id).val(0);
+                total_sum();
+            });
+            $('.minus').click(function () {
+                if ($(this).prev().val() > 0) {
+                    if ($(this).prev().val() > 0) $(this).prev().val(+$(this).prev().val() - 1);
+                }
+                var quantity = $(this).prev().val();
+                var id = $(this).attr('id');
+                var multy = $('#' + id).text();
+                multy = multy * quantity;
+                console.log(multy);
+                $('input.sum' + '#' + id).val(multy);
+                $('input.myPay' + "#" + id).val(0);
+                total_sum();
+            });
+            $('.myPay').keyup(function () {
+                var myPay = $(this).val();
+                var id = $(this).attr('id');
+                if (/\D/g.test(this.value)) {
+                    // Filter non-digits from input value.
+                    this.value = this.value.replace(/\D/g, '');
+                }
+                if (myPay == '') {
+                    $(this).val(0);
+                    myPay = 0;
+                    $('input.sum' + '#' + id).val(myPay);
+                }
+                $('input.number' + '#' + id).val(0);
+                $('input.sum' + '#' + id).val(myPay);
+                total_sum();
+            })
+            $('.number').keyup(function () {
+                if (/\D/g.test(this.value)) {
+                    // Filter non-digits from input value.
+                    this.value = this.value.replace(/\D/g, '');
+                }
+                
+                var num = $(this).val();
+                if (num == '') {
+                    $(this).val(0);
+                    num = 0;
+                    $('input.sum' + '#' + id).val(num);
+                }
+                var id = $(this).attr('id');
+                var multy = $('#' + id).text();
+                multy = multy * num;
+                console.log(multy);
+                $('input.sum' + '#' + id).val(multy);
+                $('input.myPay' + "#" + id).val(0);
+                total_sum();
+            })
         })
-    })
+    </script>
+    <script>
+        function toEnglishNumber(strNum, name) {
+            var pn = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+            var en = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+            var cache = strNum;
+            for (var i = 0; i < 10; i++) {
+                var regex_fa = new RegExp(pn[i], 'g');
+                cache = cache.replace(regex_fa, en[i]);
+            }
+            $('#' + name).val(cache);
+        }
+    </script>
+    <!-- dynamic slider -->
+    <script>
+        var slideshowContainers = document.getElementsByClassName("slideshow-container");
+        for (let s = 0; s < slideshowContainers.length; s++) {
+            var cycle = slideshowContainers[s].dataset.cycle;
+            var slides = slideshowContainers[s].querySelectorAll('.mySlides');
+            var slideIndex = 0;
+            showSlides(slides, slideIndex, cycle);
+        };
+        function showSlides(slides, slideIndex, cycle) {
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            };
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            };
+            slides[slideIndex - 1].style.display = "block";
+
+            setTimeout(function () {
+                showSlides(slides, slideIndex, cycle)
+            }, cycle);
+        };
     </script>
 </body>
 
