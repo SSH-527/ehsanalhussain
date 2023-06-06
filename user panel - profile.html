@@ -93,12 +93,12 @@
                                     <div class="col-lg-6 profileItem">
                                         <label for="personIDEdit">استان :</label>
                                         <select class="inputActive" name="province_id" v-model="province"
-                                            @change="getAllCities()">
-                                            <option>استان را انتخاب کنید</option>
+                                            id="province_id" onchange="getCity(this.value);">
+                                            <option>استان را انتخاب کنید</option> 
                                             <option value="1">آذربایجان شرقی</option>
                                             <option value="2">آذربایجان غربی</option>
                                             <option value="3">اردبیل</option>
-                                            <option value="4">اصفهان</option>
+                                             <option value="4">اصفهان</option>
                                             <option value="5">البرز</option>
                                             <option value="6">ایلام</option>
                                             <option value="7">بوشهر</option>
@@ -125,7 +125,7 @@
                                             <option value="28">مرکزی</option>
                                             <option value="29">هرمزگان</option>
                                             <option value="30">همدان</option>
-                                            <option value="31">یزد</option>
+                                            <option value="31">یزد</option> 
                                         </select>
                                     </div>
                                 </div>
@@ -134,11 +134,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 profileItem">
                                         <label for="personIDEdit">شهر :</label>
-                                        <select class="inputActive" name="" v-model="">
-                                            <option>شهر خود را انتخاب کنید</option>
-                                            <option>کرج</option>
-                                            <option>اسلامشهر</option>
-                                            <option>کاشان</option>
+                                        <select class="inputActive" name="city" id="city" v-model="">
                                         </select>
                                     </div>
                                 </div>
@@ -168,7 +164,71 @@
         </div>
     </div>
     <!-- js -->
+<script src="js/city.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <!-- <script> 
+        //      function getCity(val) {
+        //     //     console.log(state);
+        //     //     for (let i = 0; i <= 31; i++) {
+        //     //         if (i == state) {
+        //     //             with (document.getElementById('city')) {
+        //     //                 let option = new option
+        //     //             }
+        //     //         }
+        //     //     }
+
+        //     // }
+        //     $.ajax({
+        //         type: 'post',
+        //         url: 'fetch_data.php',
+        //         data: {
+        //             get_option: val
+        //         },
+        //         success: function (response) {
+        //             document.getElementById("city").innerHTML = response;
+        //         }
+        //     });
+        // }
+
+        // $(document).ready(function () {
+        //     $('#province_id').on('change', function () {
+        //         var provinceID = $(this).val();
+        //         console.log(provinceID)
+        //         $.ajax({
+        //             type: 'POST',
+        //             url: 'cities.json',
+        //             data: {
+        //                 "id": id,
+        //                 "province_id": provinceID,
+        //                 "name": name
+        //             },
+        //             success: function (response) {
+        //                 document.getElementById("city").innerHTML = response;
+        //             }
+        //         });
+        //     });
+        // });
+    </script>
+-->
+<!-- <script>
+    function getCities(province){
+        let city=document.getElementById("city");
+        fetch("cities.json")
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            let cities = data[province];
+            let out =`<option value="">شهر را انتخاب کنید</option>`;;
+           
+            for(let city of cities){
+                out +=`<option value="${city}">${city}></option>`;
+            }
+        })
+    }
+</script> -->
+
 </body>
 
 </html>

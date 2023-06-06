@@ -1411,3 +1411,29 @@ td > ul > li {
 td > ul>li:last-child {
 	border-bottom: none;
 }
+.dz-remove {
+	margin-top: 0.5rem;
+	color: #d63838;
+}
+.dz-error-mark {
+	margin-top: -39px !important;
+}
+.imgDropEdit {
+	border-radius: 15px;
+    overflow: hidden;
+    width: 100%;
+}
+.delImgDrop {
+	border: none;
+	background-color: #FFF;
+	color:#d63838;
+	margin-top: 1rem;
+	margin-bottom: 1.5rem;
+	font-size: 0.9rem;
+}
+.editImgItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
