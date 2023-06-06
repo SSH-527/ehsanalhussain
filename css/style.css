@@ -1396,3 +1396,18 @@ div.resImgEdit > p {
 select.inputActive {
 	margin-top: 0;
 }
+td > ul {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 0;
+}
+td > ul > li {
+	border-bottom: 1px solid #DCDCDC;
+	width: 100%;
+	padding: 0.3rem 0;
+}
+td > ul>li:last-child {
+	border-bottom: none;
+}

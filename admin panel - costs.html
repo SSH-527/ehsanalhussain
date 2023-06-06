@@ -223,13 +223,10 @@
         <script src="js/residence.js"></script>
         <script>
             $(document).on("click", ".deleteImg", function (e) {
-                var numImg = $(".deleteImg").length;
-                if (numImg == 1) {
-                    alert("حداقل یک تصویر باید باشد.")
-                } else {
-                    e.preventdefault;
-                    $(this).parents('figure').remove();
-                }
+                e.preventdefault;
+                $(this).parents('figure').remove();
+                $(this).parents('figure').children('figcaption').remove();
+                var n = $(this).parents('figure').children('figcaption').text();
             });
         </script>
 </body>

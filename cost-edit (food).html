@@ -191,12 +191,11 @@
         <script>
             $(document).on("click", ".deleteImg", function (e) {
                 var numImg = $(".deleteImg").length;
-                if (numImg == 1) {
-                    alert("حداقل یک تصویر باید باشد.")
-                } else {
-                    e.preventdefault;
-                    $(this).parents('.newImg').remove();
-                }
+                e.preventdefault;
+                $(this).parents('.newImg').remove();
+                $(this).parents('.newImg').children('p').remove();
+                var n = $(this).parents('.newImg').children('p').text();
+                console.log(n);
             });
             $(document).on("click", ".editImg", function (e) {
                 e.preventdefault;

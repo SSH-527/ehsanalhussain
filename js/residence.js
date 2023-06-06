@@ -4,7 +4,6 @@ let num=document.getElementById("num-of-files");
 
 function preview(){
     imageContent.innerHTML="";
-    
         num.textContent="";
         for(i of fileInput.files){
             let reader=new FileReader();
@@ -25,6 +24,5 @@ function preview(){
             }
             imageContent.appendChild(figure);
             reader.readAsDataURL(i);
-        
     } 
 }
