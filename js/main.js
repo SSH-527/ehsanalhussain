@@ -31,16 +31,16 @@ close.addEventListener("click", function () {
 });
 /////////////////////////////
 //change panel item
-let tabItem = document.querySelectorAll(".tabItem");
-let tabContent = document.querySelectorAll(".content");
-for (let i = 0; i < tabItem.length; i++) {
-  tabItem[i].addEventListener("click", function () {
-    document.querySelector("li.tabItem.active").classList.remove("active");
-    tabItem[i].classList.add("active");
-    document.querySelector("div.content.activeContent").classList.remove("activeContent");
-    tabContent[i].classList.add("activeContent");
-  })
-}
+// let tabItem = document.querySelectorAll(".tabItem");
+// let tabContent = document.querySelectorAll(".content");
+// for (let i = 0; i < tabItem.length; i++) {
+//   tabItem[i].addEventListener("click", function () {
+//     document.querySelector("li.tabItem.active").classList.remove("active");
+//     tabItem[i].classList.add("active");
+//     document.querySelector("div.content.activeContent").classList.remove("activeContent");
+//     tabContent[i].classList.add("activeContent");
+//   })
+// }
 /////////////////////////////
 // input type file change userImg
 let defaultBtn = document.querySelector("#defaultImgUser");
