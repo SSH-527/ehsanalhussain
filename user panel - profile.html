@@ -164,70 +164,31 @@
         </div>
     </div>
     <!-- js -->
-<script src="js/city.js"></script>
+<!-- <script src="js/city.js"></script> -->
     <script src="js/main.js"></script>
     <script src="js/jquery-3.7.0.min.js"></script>
-    <!-- <script> 
-        //      function getCity(val) {
-        //     //     console.log(state);
-        //     //     for (let i = 0; i <= 31; i++) {
-        //     //         if (i == state) {
-        //     //             with (document.getElementById('city')) {
-        //     //                 let option = new option
-        //     //             }
-        //     //         }
-        //     //     }
+    <script> 
+    // fetch('https://iran-locations-api.vercel.app/api/v1/states')
+    //         .then(response => response.json())
+    //         .then(json => console.log(json));
 
-        //     // }
-        //     $.ajax({
-        //         type: 'post',
-        //         url: 'fetch_data.php',
-        //         data: {
-        //             get_option: val
-        //         },
-        //         success: function (response) {
-        //             document.getElementById("city").innerHTML = response;
-        //         }
-        //     });
-        // }
+        function getCity(province){
+            console.log(province);
+            
+            $.ajax({
+                type: 'post',
+                url: 'https://iran-locations-api.vercel.app/api/v1/states',
+                success: function (data) {
+                    data.forEach(element => {
+                        $('#city').append('<option value="'+element.name+'">'+element.name+'</option>');
+                    });
+                }
+            });
+        }
+       
 
-        // $(document).ready(function () {
-        //     $('#province_id').on('change', function () {
-        //         var provinceID = $(this).val();
-        //         console.log(provinceID)
-        //         $.ajax({
-        //             type: 'POST',
-        //             url: 'cities.json',
-        //             data: {
-        //                 "id": id,
-        //                 "province_id": provinceID,
-        //                 "name": name
-        //             },
-        //             success: function (response) {
-        //                 document.getElementById("city").innerHTML = response;
-        //             }
-        //         });
-        //     });
-        // });
+        
     </script>
--->
-<!-- <script>
-    function getCities(province){
-        let city=document.getElementById("city");
-        fetch("cities.json")
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(data){
-            let cities = data[province];
-            let out =`<option value="">شهر را انتخاب کنید</option>`;;
-           
-            for(let city of cities){
-                out +=`<option value="${city}">${city}></option>`;
-            }
-        })
-    }
-</script> -->
 
 </body>
 
