@@ -168,20 +168,23 @@
     <script src="js/main.js"></script>
     <script src="js/jquery-3.7.0.min.js"></script>
     <script> 
-    // fetch('https://iran-locations-api.vercel.app/api/v1/states')
+    // fetch('https://iran-locations-api.vercel.app/api/v1/states?id=9')
     //         .then(response => response.json())
     //         .then(json => console.log(json));
 
         function getCity(province){
             console.log(province);
-            
             $.ajax({
                 type: 'post',
-                url: 'https://iran-locations-api.vercel.app/api/v1/states',
+                url: 'https://iran-locations-api.vercel.app/api/v1/cities?state=تهران',
                 success: function (data) {
-                    data.forEach(element => {
+                    data = JSON.parse(data);
+                        data.forEach(element => {
                         $('#city').append('<option value="'+element.name+'">'+element.name+'</option>');
+                       console.log(element)
                     });
+                   
+                   
                 }
             });
         }

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ehsanalhussain</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- <link href='css/normalize.css' rel='stylesheet' /> -->
+    <link href="css/vertical-responsive-menu.min.css" rel="stylesheet" />
+    <link href="css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/persianDatepicker-default.css" />
+    <script src="js/prism.js"></script>
+    <script src="js/vertical-responsive-menu.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css">
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
+
+</head>
+<!-- code -->
+
+<body class="panel container">
+    <div class="container dashboard" id="mainContent">
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 box panelItem">
+                <i class="fa fa-times cross" aria-hidden="true"></i>
+                <div class="boxImg col-lg-4 col-sm-1 col-md-10">
+                    <img src="image/Portrait_Placeholder.png" alt="user image" class="pic-1 userImage">
+                </div>
+                <h6>کیان کاظمی</h6>
+                <p> سطح دسترسی : <span> مدیر سایت</span></p>
+                <hr>
+                <div class="list">
+                    <ul>
+                        <li class="tabItem "> <a href="admin panel - costs.html"> لیست هزینه ها</a></li>
+                        <li class="tabItem"> <a href="admin panel - user lists.html"> لیست کاربران</a></li>
+                        <li class="tabItem active"> <a href="#"> رزرو اسکان</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="iconSection col-lg-12 col-sm-12">
+                    <div class="col-lg-1 col-sm-1  mobileMenu">
+                        <i class="fa fa-bars menuIcon" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-lg-1 col-sm-1  exit exitBtn">
+                        <img src="image/exit.png" alt="exit" title="خروج">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="content activeContent box exitCost">
+                        <div class="panelAlert">
+                            <div class="container">
+                                <div class="row alertBox">
+                                    <!-- diffrrent styles of alerts are added to the following div -->
+                                    <div class="col-lg-11 col-sm-12 alertJS" role="alert">
+                                        <p id="p"> متن آزمایشی پیغام سایت</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h5 class="title"> افزودن اتاق جدید</h5>
+                        <div class="container">
+                            <div class="row">
+                                <form method="post" class="col-lg-12 col-sm-12 editCostForm" id="newResidence">
+                                    <div>
+                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                            <div class="col-lg-6 col-sm-12">
+                                                <label for="titleResidence" class="active"> عنوان اتاق :</label>
+                                                <input type="text" value="" id="titleResidence" name="titleResidence"
+                                                    class="col-lg-5 col-sm-12 costPrice">
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12">
+                                                <label for="Capacity" class="active"> ظرفیت :</label>
+                                                <input type="number" value="" id="Capacity" name="Capacity"
+                                                    class="col-lg-5 col-sm-12 costPrice">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="row editFeauter">
+                                            <div class="col-lg-6 col-sm-12">
+                                                <label class="active"> تاریخ شروع رزرو :</label>
+                                                <input type="text" value="" id="start" name="start date"
+                                                    class="col-lg-5 col-sm-12 costPrice usage" placeholder="yyyy-mm-dd"
+                                                    required>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12">
+                                                <label class="active"> تاریخ پایان رزرو :</label>
+                                                <input type="text" value="" id="end" name="end date"
+                                                    class="col-lg-5 col-sm-12 costPrice usage" placeholder="yyyy-mm-dd"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 1.5rem;">
+                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                            <label class="active picturs">انتخاب تصاویر :</label>
+                                            <input type="hidden" name="photo_[id]" id="product-photo">
+                                            <div class="col-lg-12 col-sm-12 ">
+                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo"
+                                                    style="margin:0;margin-top: 0.3rem;">
+                                                    <div class="dz-message" data-dz-message><span>برای آپلود فایل ها
+                                                            کلیک کنید. </span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="row editFeauter">
+                                            <div class="col-lg-12 col-sm-12">
+                                                <label class="active">توضیحات اتاق :</label>
+                                                <textarea placeholder="توضیحات مربوط به اتاق"
+                                                    class="col-lg-12 descriptionCost"
+                                                    name="descriptionResidence"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="row editFeauter col-lg-4 leftBtn">
+                                            <div class="col-lg-12 col-sm-12">
+                                                <button type="submit" class="editBtn">ثبت اتاق</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupWrapper"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-11 popup">
+                    <h4>خروج از حساب کاربری </h4>
+                    <p>آیا میخواهید از حساب کاربری خود خارج شوید ؟</p>
+                    <div>
+                        <button class="closePopup">بستن</button>
+                        <form class="exitUser">
+                            <button class="btnClose" type="submit">خروج</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- js -->
+        <script src="js/costImg.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script src="js/persianDatepicker.js"></script>
+        <script>
+            // persian date picker
+            $(function () {
+                $("#start").persianDatepicker({ startDate: "today", endDate: "1440/11/5", formatDate: "YYYY-0M-0D" });
+                $("#end").persianDatepicker({ startDate: "today", endDate: "1440/11/5", formatDate: "YYYY-0M-0D" });
+            })
+        </script>
+        <script>
+            Dropzone.prototype.defaultOptions.dictRemoveFile = "حذف فایل";
+        </script>
+        <script>
+            Dropzone.autoDiscover = false;
+            var photosGallery = []
+            var drop = new Dropzone('#photo', {
+                addRemoveLinks: true,
+                url: "{{ route('photos.upload') }}",
+                sending: function (file, xhr, formData) {
+                    formData.append("_token", "{{csrf_token()}}")
+                },
+                success: function (file, response) {
+                    photosGallery.push(response.photo_id)
+                }
+            });
+            productGallery = function () {
+                document.getElementById('product-photo').value = photosGallery
+
+            }
+        </script>
+</body>
+
+</html>

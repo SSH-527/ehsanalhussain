@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ehsanalhussain</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<!-- code -->
+
+<body class="panel container">
+    <div class="container dashboard" id="mainContent">
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 box panelItem">
+                <i class="fa fa-times cross" aria-hidden="true"></i>
+                <div class="boxImg col-lg-4 col-sm-1 col-md-10">
+                    <img src="image/Portrait_Placeholder.png" alt="user image" class="pic-1 userImage">
+                </div>
+                <h6>کیان کاظمی</h6>
+                <p> سطح دسترسی : <span> مدیریت هتل </span></p>
+                <hr>
+                <div class="list">
+                    <ul>
+                        <li class="tabItem active"> <a href="#"> لیست رزرو ها </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="iconSection col-lg-12 col-sm-12">
+                    <div class="col-lg-1 col-sm-1  mobileMenu">
+                        <i class="fa fa-bars menuIcon" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-lg-1 col-sm-1  exit exitBtn">
+                        <img src="image/exit.png" alt="exit" title="خروج">
+                    </div>
+                </div>
+
+                <div class="box" style="height: 100vh;">
+                    <div class="content activeContent box exitCost">
+                        <h5 class="title maintitle"> رزرو های هتل آسمان</h5>
+                        <form class="col-lg-12" method="post">
+                            <div class="col-lg-12 col-sm-12 chooseSection" style="display: flex; align-items: center;">
+                                <div class="col-lg-4 col-sm-12">
+                                    <label> انتخاب شهر :</label>
+                                    <select class="costPrice" required>
+                                        <option>انتخاب کنید</option>
+                                        <option value="karballa">کربلا</option>
+                                        <option value="najaf">نجف</option>
+                                        <option value="mashhad">مشهد</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-sm-12">
+                                    <label> انتخاب اقامتگاه :</label>
+                                    <select class="costPrice" required>
+                                        <option>انتخاب کنید</option>
+                                        <option value="hotel_1">هتل یک</option>
+                                        <option value="hotel_2">هتل دو</option>
+                                        <option value="hotel_3">هتل سه</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-sm-12">
+                                    <button class="searchRoom" type="submit">جستجو رزرو</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 searchUser">
+                                    <form class="col-lg-6 col-sm-12">
+                                        <input type="text" class="icon"
+                                            placeholder="نام و نام خانوادگی را وارد کنید" id="searchUser"
+                                            onkeyup="userReserve()">
+                                            <button>جستجو</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="container table-responsive">
+                                    <table class="table table-bordered table-hover editCostTbl" id="userResTable">
+                                        <th class="tableHead">شماره</th>
+                                        <th class="tableHead"> نام و نام خانوادگی سرپرست</th>
+                                        <th class="tableHead">اتاق</th>
+                                        <th class="tableHead">تاریخ ورود</th>
+                                        <th class="tableHead">تاریخ خروج</th>
+                                        <tr>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                کیان کاظمی
+                                            </td>
+
+                                            <td>
+                                              <a href="room detail.html">14</a>
+                                            </td>
+                                            <td>
+                                                1402-05-31
+                                            </td>
+                                            <td>
+                                                1402-06-02
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                2
+                                            </td>
+                                            <td>
+                                                سیده سحر حسینی
+                                            </td>
+
+                                            <td>
+                                                <a href="room detail.html">14</a>
+                                            </td>
+                                            <td>
+                                                1402-05-31
+                                            </td>
+                                            <td>
+                                                1402-06-02
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                وحید جلالی
+                                            </td>
+
+                                            <td>
+                                                <a href="room detail.html">14</a>
+                                            </td>
+                                            <td>
+                                                1402-05-31
+                                            </td>
+                                            <td>
+                                                1402-06-02
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                4
+                                            </td>
+                                            <td>
+                                                کیان کاظمی
+                                            </td>
+
+                                            <td>
+                                                <a href="room detail.html">14</a>
+                                            </td>
+                                            <td>
+                                                1402-05-31
+                                            </td>
+                                            <td>
+                                                1402-06-02
+                                            </td>
+
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popupWrapper"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-11 popup">
+                    <h4>خروج از حساب کاربری </h4>
+                    <p>آیا میخواهید از حساب کاربری خود خارج شوید ؟</p>
+                    <div>
+                        <button class="closePopup">بستن</button>
+                        <form class="exitUser">
+                            <button class="btnClose" type="submit">خروج</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- js -->
+        <script src="js/costImg.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script>
+            function userReserve() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("searchUser");
+                filter = input.value;
+                table = document.getElementById("userResTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[1];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
+
+</body>
+
+</html>
