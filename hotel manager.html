@@ -50,7 +50,10 @@
                             <div class="col-lg-12 col-sm-12 chooseSection" style="display: flex; align-items: center;">
                                 <div class="col-lg-4 col-sm-12">
                                     <label> انتخاب شهر :</label>
-                                    <select class="costPrice" required>
+                                    <select class="costPrice" onchange="getHotel(this.value);" 
+                                    name="hotel_id" v-model="hotel"
+                                            id="hotel_id"
+                                    required >
                                         <option>انتخاب کنید</option>
                                         <option value="karballa">کربلا</option>
                                         <option value="najaf">نجف</option>
@@ -59,11 +62,8 @@
                                 </div>
                                 <div class="col-lg-4 col-sm-12">
                                     <label> انتخاب اقامتگاه :</label>
-                                    <select class="costPrice" required>
-                                        <option>انتخاب کنید</option>
-                                        <option value="hotel_1">هتل یک</option>
-                                        <option value="hotel_2">هتل دو</option>
-                                        <option value="hotel_3">هتل سه</option>
+                                    <select class="costPrice" id="hotel" required>
+                                        
                                     </select>
                                 </div>
                                 <div class="col-lg-3 col-sm-12">
@@ -216,6 +216,24 @@
                     }
                 }
             }
+        </script>
+        <script>
+            function getHotel(province){
+            console.log(province);
+            $.ajax({
+                type: 'post',
+                url: '',
+                success: function (data) {
+                    data = JSON.parse(data);
+                        data.forEach(element => {
+                        $('#hotel').append('<option value="'+element.name+'">'+element.name+'</option>');
+                       console.log(element)
+                    });
+                   
+                   
+                }
+            });
+        }
         </script>
 
 </body>

@@ -14,16 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <!-- <link href='css/normalize.css' rel='stylesheet' /> -->
-    <link href="css/vertical-responsive-menu.min.css" rel="stylesheet" />
-    <link href="css/prism.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/persianDatepicker-default.css" />
-    <script src="js/prism.js"></script>
-    <script src="js/vertical-responsive-menu.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css">
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
-
+    <link rel="stylesheet" href="css/dropzone.css">
+    <script type="text/javascript" src="js/dropzone.js"></script>
 </head>
 <!-- code -->
 
@@ -55,6 +47,7 @@
                         <img src="image/exit.png" alt="exit" title="خروج">
                     </div>
                 </div>
+
                 <div class="box">
                     <div class="content activeContent box exitCost">
                         <div class="panelAlert">
@@ -67,73 +60,52 @@
                                 </div>
                             </div>
                         </div>
-                        <h5 class="title"> افزودن اتاق جدید</h5>
+                        <h5 class="title"> افزودن شهر جدید</h5>
                         <div class="container">
                             <div class="row">
                                 <form method="post" class="col-lg-12 col-sm-12 editCostForm" id="newResidence">
                                     <div>
                                         <div class="row editFeauter" style="justify-content: space-between;">
                                             <div class="col-lg-6 col-sm-12">
-                                                <label for="titleResidence" class="active"> عنوان اتاق :</label>
+                                                <label for="titleResidence" class="active"> عنوان شهر :</label>
                                                 <input type="text" value="" id="titleResidence" name="titleResidence"
                                                     class="col-lg-5 col-sm-12 costPrice">
                                             </div>
-                                            <div class="col-lg-6 col-sm-12">
-                                                <label for="Capacity" class="active"> ظرفیت :</label>
-                                                <input type="number" value="" id="Capacity" name="Capacity"
-                                                    class="col-lg-5 col-sm-12 costPrice">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="row editFeauter">
-                                            <div class="col-lg-6 col-sm-12">
-                                                <label class="active"> تاریخ شروع رزرو :</label>
-                                                <input type="text" value="" id="start" name="start date"
-                                                    class="col-lg-5 col-sm-12 costPrice usage" placeholder="yyyy-mm-dd"
-                                                    required>
-                                            </div>
-                                            <div class="col-lg-6 col-sm-12">
-                                                <label class="active"> تاریخ پایان رزرو :</label>
-                                                <input type="text" value="" id="end" name="end date"
-                                                    class="col-lg-5 col-sm-12 costPrice usage" placeholder="yyyy-mm-dd"
-                                                    required>
+                                            <div class="col-lg-5 col-sm-12">
+                                                <label class="active">فعال :</label>
+                                                <input type="radio" value="on" name="status" checked="checked"
+                                                    class="col-lg-1 col-sm-6">
+                                                <label class="active">غیرفعال :</label>
+                                                <input type="radio" value="off" name="status" class="col-lg-1 col-sm-6">
                                             </div>
                                         </div>
                                     </div>
                                     <div style="margin-bottom: 1.5rem;">
                                         <div class="row editFeauter" style="justify-content: space-between;">
-                                            <label class="active picturs">انتخاب تصاویر :</label>
+                                            <label class="active picturs">انتخاب تصویر :</label>
                                             <input type="hidden" name="photo_[id]" id="product-photo">
                                             <div class="col-lg-12 col-sm-12 ">
                                                 <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo"
                                                     style="margin:0;margin-top: 0.3rem;">
-                                                    <div class="dz-message" data-dz-message><span>برای آپلود فایل ها
+                                                    <div class="dz-message" data-dz-message><span>برای آپلود فایل 
                                                             کلیک کنید. </span></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="row editFeauter">
-                                            <div class="col-lg-12 col-sm-12">
-                                                <label class="active">توضیحات اتاق :</label>
-                                                <textarea placeholder="توضیحات مربوط به اتاق"
-                                                    class="col-lg-12 descriptionCost"
-                                                    name="descriptionResidence"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div>
                                         <div class="row editFeauter col-lg-4 leftBtn">
                                             <div class="col-lg-12 col-sm-12">
-                                                <button type="submit" class="editBtn">ثبت اتاق</button>
+                                                <button type="submit" class="editBtn">ثبت شهر</button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
+
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -157,16 +129,18 @@
         <script src="js/costImg.js"></script>
         <script src="js/main.js"></script>
         <script src="js/jquery-1.10.1.min.js"></script>
-        <script src="js/persianDatepicker.js"></script>
-        <script>
-            // persian date picker
-            $(function () {
-                $("#start").persianDatepicker({ startDate: "today", endDate: "1440/11/5", formatDate: "YYYY-0M-0D" });
-                $("#end").persianDatepicker({ startDate: "today", endDate: "1440/11/5", formatDate: "YYYY-0M-0D" });
-            })
-        </script>
         <script>
             Dropzone.prototype.defaultOptions.dictRemoveFile = "حذف فایل";
+        </script>
+        <script>
+            Dropzone.prototype.defaultOptions.init = function () {
+
+                this.hiddenFileInput.removeAttribute('multiple');
+                this.on("maxfilesexceeded", function (file) {
+                    this.removeAllFiles();
+                    this.addFile(file);
+                });
+            };
         </script>
         <script>
             Dropzone.autoDiscover = false;

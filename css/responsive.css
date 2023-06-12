@@ -57,19 +57,7 @@
       margin-top: 45px;
    }
    .boxImg > img {
-      width: 30% !important;
-   }
-   .profileImg > img {
       width: 70% !important;
-   }
-   .costSlide > img {
-      height: 200px;
-   }
-   .costSlide {
-      margin: 0 0.5rem;
-   }
-   select.inputActive {
-      width: 85%;
    }
    
 }
@@ -186,7 +174,7 @@
       font-size: 1.2rem;
    }
    img.userImage {
-      width: 30%;
+      width: 30% !important;
    }
    textarea {
       width: 85%;
@@ -372,13 +360,6 @@
    .alertBox > div > p {
       font-size: 1.2rem;
    }
-   .totalSum > form {
-      width: 90%;
-   }
-   button.total {
-      font-size: 1.5rem;
-   }
-
 }
 @media  (max-width:576px) {
    .alertSection {
@@ -420,9 +401,6 @@
    input[type="number"].number {
       width: 40% !important;
    }
-   .totalSum > form {
-      width: 80%;
-   }
 }
 @media screen and (max-width:992px) {
    .chooseFile ,textarea.descriptionCost ,.readonly {
@@ -434,14 +412,25 @@
    input[type="number"].number {
       width: 40% !important;
    }
+   .residenceImg > img {
+      height: 180px;
+   }
    figure {
       width: 100%;
+      margin: 2rem 0;
    }
-   #images {
-      margin: 0 auto;
-   }
-   div.residenceImg {
+   div.residenceImg ,.citySection,.chooseSection {
+      display: flex;
       flex-direction: column;
+   }
+   .roomDetailes > form.sp > input {
+      width:100%;
+     }
+     .roomDetailes > form.sp > div {
+      width:100%;
+     }
+     .searchUser > form {
+      width: 100%;
    }
    
 }

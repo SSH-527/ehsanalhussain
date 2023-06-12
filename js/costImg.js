@@ -26,6 +26,24 @@ popupWrapper.addEventListener("click", function () {
   popupWrapper.classList.remove("showPopup");
 })
 //////////////////////
+// popup
+let cancel = document.querySelector(".cancelRes");
+let popupCancel = document.querySelector(".popupCancelRes");
+let closePopupCancel = document.querySelector(".closePopupCancel");
+let popupWrapperCancel = document.querySelector(".popupWrapper");
+cancel.addEventListener("click", function () {
+  popupCancel.classList.add("showPopup");
+  popupWrapperCancel.classList.add("showPopup");
+})
+closePopupCancel.addEventListener("click", function () {
+  popupCancel.classList.remove("showPopup");
+  popupWrapperCancel.classList.remove("showPopup");
+})
+popupWrapperCancel.addEventListener("click", function () {
+  popupCancel.classList.remove("showPopup");
+  popupWrapperCancel.classList.remove("showPopup");
+})
+//////////////////////
 // mobile menu
 let menuIcon = document.querySelector(".menuIcon");
 let mobileMenu = document.querySelector(".panelItem");

@@ -4,16 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ehsanalhussain-admin panel-manage costs</title>
+    <title>ehsanalhussain</title>
     <!-- css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <!-- <link href='css/normalize.css' rel='stylesheet' /> -->
+    <link href="css/vertical-responsive-menu.min.css" rel="stylesheet" />
+    <link href="css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/persianDatepicker-default.css" />
+    <script src="js/prism.js"></script>
+    <script src="js/vertical-responsive-menu.min.js"></script>
     <link rel="stylesheet" href="css/dropzone.css">
-    <script src="js/dropzone.js"></script>
+    <script type="text/javascript" src="js/dropzone.js"></script>
 </head>
 <!-- code -->
 
@@ -30,8 +38,9 @@
                 <hr>
                 <div class="list">
                     <ul>
-                        <li class="tabItem active"> <a href="#"> لیست هزینه ها</a></li>
+                        <li class="tabItem "> <a href="admin panel - costs.html"> لیست هزینه ها</a></li>
                         <li class="tabItem"> <a href="admin panel - user lists.html"> لیست کاربران</a></li>
+                        <li class="tabItem active"> <a href="#"> رزرو اسکان</a></li>
                     </ul>
                 </div>
             </div>
@@ -51,90 +60,76 @@
                                 <div class="row alertBox">
                                     <!-- diffrrent styles of alerts are added to the following div -->
                                     <div class="col-lg-11 col-sm-12 alertJS" role="alert">
-                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p id="p"> متن آزمایشی پیغام سایت</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <h5 class="title"> ویرایش هزینه ی غذا </h5>
+                        <h5 class="title"> افزودن اتاق جدید</h5>
                         <div class="container">
                             <div class="row">
-                                <form method="post" class="col-lg-12 col-sm-12 editCostForm">
+                                <form method="post" class="col-lg-12 col-sm-12 editCostForm" id="newResidence">
                                     <div>
-                                        <div class="row editFeauter">
-                                            <div class="row editFeauter" style="justify-content: space-between;">
-                                                <div class="col-lg-6 col-sm-12">
-                                                    <label for="titleCost" class="active"> عنوان هزینه :</label>
-                                                    <input type="text" value="غذا" id="titleCost" name="titleCost"
-                                                        class="col-lg-5 col-sm-12 costPrice">
-                                                </div>
-                                                <div class="col-lg-5 col-sm-12">
-                                                    <label class="active">فعال :</label>
-                                                    <input type="radio" value="on" name="status" checked="checked"
-                                                        class="col-lg-1 col-sm-6">
-                                                    <label class="active">غیرفعال :</label>
-                                                    <input type="radio" value="off" name="status"
-                                                        class="col-lg-1 col-sm-6">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="row editFeauter">
+                                        <div class="row editFeauter" style="justify-content: space-between;">
                                             <div class="col-lg-6 col-sm-12">
-                                                <label class="active">قیمت هر سهم :</label>
-                                                <input type="text" value="10000000" name="price"
-                                                    class="col-lg-6 col-sm-12 costPrice">
+                                                <label for="titleResidence" class="active"> عنوان اتاق :</label>
+                                                <input type="text" value="" id="titleResidence" name="titleResidence"
+                                                    class="col-lg-5 col-sm-12 costPrice">
+                                            </div>
+                                            <div class="col-lg-6 col-sm-12">
+                                                <label for="Capacity" class="active"> ظرفیت :</label>
+                                                <input type="number" value="" id="Capacity" name="Capacity"
+                                                    class="col-lg-5 col-sm-12 costPrice">
                                             </div>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="row editFeauter" style="justify-content: space-between;">
-                                            <label class="active picturs">ویرایش تصاویر :</label>
+                                            <div class="col-lg-5 col-sm-12">
+                                                <label class="active">فعال :</label>
+                                                <input type="radio" value="on" name="status" checked="checked"
+                                                    class="col-lg-1 col-sm-6">
+                                                <label class="active">غیرفعال :</label>
+                                                <input type="radio" value="off" name="status"
+                                                    class="col-lg-1 col-sm-6">
+                                            </div>
+                                            <div class="col-lg-5 col-sm-12">
+                                                <label class="active">عمومی :</label>
+                                                <input type="radio" value="public" name="roomFeature" checked="checked"
+                                                    class="col-lg-1 col-sm-6">
+                                                <label class="active">خصوصی :</label>
+                                                <input type="radio" value="private" name="roomFeature"
+                                                    class="col-lg-1 col-sm-6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style="margin-bottom: 1.5rem;">
+                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                            <label class="active picturs">انتخاب تصاویر :</label>
                                             <input type="hidden" name="photo_[id]" id="product-photo">
                                             <div class="col-lg-12 col-sm-12 ">
-                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo">
-                                                    <div class="row">
-                                                        <!-- @foreach($product->photos as $photo) -->
-                                                        <div class="col-lg-6 col-sm-12 editImgItem"
-                                                            id="updated_photo_{{$photo->id}}">
-                                                            <div>
-                                                                <img class="imgDropEdit" src="image/food.png">
-                                                            </div>
-                                                            <button type="button" class="delImgDrop"
-                                                                onclick="removeImages()">حذف فایل</button>
-                                                        </div>
-                                                        <!-- @endforeach -->
-                                                        <div class="col-lg-6 col-sm-12 editImgItem"
-                                                            id="updated_photo_{{$photo->id}}">
-                                                            <div>
-                                                                <img class="imgDropEdit" src="image/food.png">
-                                                            </div>
-                                                            <button type="button" class="delImgDrop"
-                                                                onclick="removeImages()">حذف فایل</button>
-                                                        </div>
-                                                    </div>
+                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo"
+                                                    style="margin:0;margin-top: 0.3rem;">
                                                     <div class="dz-message" data-dz-message><span>برای آپلود فایل ها
                                                             کلیک کنید. </span></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                     <div>
                                         <div class="row editFeauter">
                                             <div class="col-lg-12 col-sm-12">
-                                                <label class="active">توضیحات هر سهم:</label>
-                                                <textarea placeholder="توضیحات مربوط به هر هزینه"
-                                                    class="col-lg-12 descriptionCost" name="description"></textarea>
+                                                <label class="active">توضیحات اتاق :</label>
+                                                <textarea placeholder="توضیحات مربوط به اتاق"
+                                                    class="col-lg-12 descriptionCost"
+                                                    name="descriptionResidence"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <div>
                                         <div class="row editFeauter col-lg-4 leftBtn">
                                             <div class="col-lg-12 col-sm-12">
-                                                <button type="submit" class="editBtn" onclick="productGallery()">ویرایش
-                                                    هزینه</button>
+                                                <button type="submit" class="editBtn">ثبت اتاق</button>
                                             </div>
                                         </div>
                                     </div>
@@ -163,14 +158,13 @@
         <!-- js -->
         <script src="js/costImg.js"></script>
         <script src="js/main.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/jquery-1.10.1.min.js"></script>
         <script>
             Dropzone.prototype.defaultOptions.dictRemoveFile = "حذف فایل";
         </script>
         <script>
             Dropzone.autoDiscover = false;
             var photosGallery = []
-            //   var photos = [].concat({{$product->photos->pluck('id')}})
             var drop = new Dropzone('#photo', {
                 addRemoveLinks: true,
                 url: "{{ route('photos.upload') }}",
@@ -182,12 +176,8 @@
                 }
             });
             productGallery = function () {
-                document.getElementById('product-photo').value = photosGallery.concat(photos)
-            }
-            removeImages = function (id) {
-                var index = photos.indexOf(id)
-                photos.splice(index, 1);
-                document.getElementById('updated_photo_' + id).remove();
+                document.getElementById('product-photo').value = photosGallery
+
             }
         </script>
 </body>

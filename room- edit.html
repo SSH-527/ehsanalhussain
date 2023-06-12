@@ -12,11 +12,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"></script>
-</head>
+    <link rel="stylesheet" href="css/dropzone.css">
+    <script type="text/javascript" src="js/dropzone.js"></script>
+    </head>
 <!-- code -->
-
 <body class="panel container">
     <div class="container dashboard" id="mainContent">
         <div class="row">
@@ -57,52 +56,41 @@
                                 </div>
                             </div>
                         </div>
-                        <h5 class="title"> ویرایش اسکان (هتل آسمان )</h5>
+                        <h5 class="title"> ویرایش اتاق 14 </h5>
                         <div class="container">
                             <div class="row">
                                 <form method="post" class="col-lg-12 col-sm-12 editCostForm" id="newResidence">
                                     <div>
                                         <div class="row editFeauter" style="justify-content: space-between;">
                                             <div class="col-lg-6 col-sm-12">
-                                                <label for="titleResidence" class="active"> عنوان اسکان :</label>
-                                                <input type="text" value="آسمان" id="titleResidence"
+                                                <label for="titleResidence" class="active"> عنوان اتاق :</label>
+                                                <input type="text" value="اتاق 14" id="titleResidence"
                                                     name="titleResidence" class="col-lg-5 col-sm-12 costPrice">
                                             </div>
                                             <div class="col-lg-6 col-sm-12">
-                                                <label class="active"> انتخاب شهر :</label>
-                                                <select name="city">
-                                                    <option value="" disabled hidden>انتخاب کنید</option>
-                                                    <option value="Karbala" selected>کربلا</option>
-                                                    <option value="Najaf">نجف</option>
-                                                    <option value="Mashhad">مشهد</option>
-                                                    <option value="Qom">قم</option>
-                                                </select>
+                                                <label for="Capacity" class="active"> ظرفیت :</label>
+                                                <input type="number" value="5" id="Capacity" name="Capacity"
+                                                    class="col-lg-5 col-sm-12 costPrice">
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="row editFeauter">
-
-                                            <div class="col-lg-6 col-sm-12">
-                                                <label for="telephone" class="active"> شماره تماس :</label>
-                                                <input type="tel" value="9865243522" id="telephone" name="telephone"
-                                                    class="col-lg-5 col-sm-12 costPrice">
-                                            </div>
+                                        <div class="row editFeauter" style="justify-content: space-between;">
                                             <div class="col-lg-5 col-sm-12">
                                                 <label class="active">فعال :</label>
                                                 <input type="radio" value="on" name="status" checked="checked"
                                                     class="col-lg-1 col-sm-6">
                                                 <label class="active">غیرفعال :</label>
-                                                <input type="radio" value="off" name="status" class="col-lg-1 col-sm-6">
+                                                <input type="radio" value="off" name="status"
+                                                    class="col-lg-1 col-sm-6">
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="row editFeauter">
-                                            <div class="col-lg-12 col-sm-12">
-                                                <label class="active"> آدرس :</label>
-                                                <textarea placeholder="آدرس را وارد کنید"
-                                                    class="col-lg-12 descriptionCost" name="address"></textarea>
+                                            <div class="col-lg-5 col-sm-12">
+                                                <label class="active">عمومی :</label>
+                                                <input type="radio" value="public" name="roomFeature" checked="checked"
+                                                    class="col-lg-1 col-sm-6">
+                                                <label class="active">خصوصی :</label>
+                                                <input type="radio" value="private" name="roomFeature"
+                                                    class="col-lg-1 col-sm-6">
                                             </div>
                                         </div>
                                     </div>
@@ -142,8 +130,8 @@
                                     <div>
                                         <div class="row editFeauter">
                                             <div class="col-lg-12 col-sm-12">
-                                                <label class="active">توضیحات اسکان :</label>
-                                                <textarea placeholder="توضیحات مربوط به اسکان"
+                                                <label class="active">توضیحات اتاق :</label>
+                                                <textarea placeholder="توضیحات مربوط به اتاق"
                                                     class="col-lg-12 descriptionCost"
                                                     name="descriptionResidence"></textarea>
                                             </div>
@@ -152,7 +140,7 @@
                                     <div>
                                         <div class="row editFeauter col-lg-4 leftBtn">
                                             <div class="col-lg-12 col-sm-12">
-                                                <button type="submit" class="editBtn">ویرایش اسکان</button>
+                                                <button type="submit" class="editBtn">ویرایش اتاق</button>
                                             </div>
                                         </div>
                                     </div>
