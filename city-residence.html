@@ -83,18 +83,17 @@
                                     </div>
                                 </div>
                             </form>
-
-
                             <div class="container">
                                 <div class="row">
                                     <div class="col-1g-12">
                                         <div class="container">
                                             <form id="filter" action="city-residence.html">
-                                                <span> اتاق های خالی :</span>
-                                                <label class="switch"> 
-                                                    <input type="checkbox">
-                                                    <span class="slider round"></span>
-                                                </label>
+                                                <div class="col-lg-4 filterRoom">
+                                                    <div>
+                                                        <input type="checkbox" id="empty" name="allEmptyRoom">
+                                                        <label for="empty"> فقط اتاق های خالی</label>
+                                                    </div>
+                                                </div>
                                             </form>
                                         </div>
                                         <div class="col-1g-12 searchInfo">
@@ -102,7 +101,6 @@
                                             <p>تعداد اتاق های پر در این بازه 5 مورد است. میتوانید اتاق های پر را در بازه
                                                 ی دیگر رزرو کنید.</p>
                                         </div>
-
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-lg-4 col-sm-12 showRoom">
@@ -135,10 +133,7 @@
                                                         <h5>اتاق 14</h5>
                                                         <h6>ظرفیت 5 نفر</h6>
                                                         <div class="fill">اتاق پر</div>
-                                                        <form method="post" action="show room-fill.html">
-                                                            <input type="text" value="room14" name="room14" hidden>
-                                                            <button type="submit">مشاهده اتاق</button>
-                                                        </form>
+                                                        <button type="submit" class="disableShowRoom">مشاهده اتاق</button>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-sm-12 showRoom">
@@ -159,10 +154,7 @@
                                                         <h5>اتاق 14</h5>
                                                         <h6>ظرفیت 5 نفر</h6>
                                                         <div class="fill">اتاق پر</div>
-                                                        <form method="post" action="show room-fill.html">
-                                                            <input type="text" value="room14" name="room14" hidden>
-                                                            <button type="submit">مشاهده اتاق</button>
-                                                        </form>
+                                                        <button type="submit" class="disableShowRoom">مشاهده اتاق</button>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-4 col-sm-12 showRoom">
@@ -284,13 +276,13 @@
             return false;
         });
     </script>
-    <!-- <script>
+    <script>
         $(document).ready(function () {
             $("#filter").on("change", "input:checkbox", function () {
                 $("#filter").submit();
             });
         });
-    </script> -->
+    </script> 
 
 </body>
 

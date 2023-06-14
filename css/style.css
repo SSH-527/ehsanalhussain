@@ -1294,7 +1294,8 @@ button.addResidence {
 	background-color: #1A8ACC;
 	color: #FFF;
 	padding: 0.7rem 1.2rem;
-	margin: 2.5rem 0;
+	margin-bottom: 1.5rem;
+	float: left;
 }
 
 label.picturs {
@@ -1840,6 +1841,7 @@ div#photo {
 div.back {
 	display: flex;
 	justify-content: flex-end;
+	margin-top: 1.5rem;
 }
 
 div.back>a {
@@ -1986,4 +1988,14 @@ form#filter>span {
   }
   .slider.round:before {
 	border-radius: 50%;
+  }
+  button.disableShowRoom {
+	cursor: not-allowed !important;
+	background-color: #f5f5f5;
+	border: none;
+	border-radius: 5px;
+	padding: 0.8rem;
+	color: #AFAFAF;
+	width: 100%;
+	margin-top: 1rem;
   }

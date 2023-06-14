@@ -218,8 +218,9 @@
             }
         </script>
         <script>
-            function getHotel(province){
-            console.log(province);
+            function getHotel(hotel){
+            console.log(hotel);
+            //empty
             $.ajax({
                 type: 'post',
                 url: '',
@@ -229,13 +230,10 @@
                         $('#hotel').append('<option value="'+element.name+'">'+element.name+'</option>');
                        console.log(element)
                     });
-                   
-                   
                 }
             });
         }
         </script>
-
 </body>
 
 </html>
