@@ -57,9 +57,9 @@ table {
 @font-face {
 	font-family: "Shabnam";
 	src:
-		url(/font/Shabnam.woff) format("woff"),
-		url(/font/Shabnam.ttf) format("truetype"),
-		url(/font/Shabnam.eot) format("embedded-opentype");
+		url(../font/Shabnam.woff) format("woff"),
+		url(../font/Shabnam.ttf) format("truetype"),
+		url(../font/Shabnam.eot) format("embedded-opentype");
 }
 
 body {
@@ -390,7 +390,7 @@ div.list>ul>li>a {
 }
 
 .feature>h6 {
-	font-size: 0.8rem;
+	font-size:0.9rem;
 }
 
 .units {
@@ -1271,6 +1271,7 @@ div.alertWarrning {
 .panelAlert {
 	position: relative;
 	height: 100px;
+	z-index: 0;
 }
 
 /*---- end alert style--------*/
