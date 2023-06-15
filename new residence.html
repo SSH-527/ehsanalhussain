@@ -6,19 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ehsanalhussain</title>
     <!-- css -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/dropzone.css">
     <script type="text/javascript" src="js/dropzone.js"></script>
     <!-- <link href='css/normalize.css' rel='stylesheet' /> -->
-    <link href="css/vertical-responsive-menu.min.css" rel="stylesheet" />
-    <link href="css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/vertical-responsive-menu.min.css" />
+    <link rel="stylesheet" href="css/prism.css" />
     <link rel="stylesheet" href="css/persianDatepicker-default.css" />
     <script src="js/prism.js"></script>
     <script src="js/vertical-responsive-menu.min.js"></script>
@@ -61,11 +57,21 @@
                                 <div class="row alertBox">
                                     <!-- diffrrent styles of alerts are added to the following div -->
                                     <div class="col-lg-11 col-sm-12 alertJS" role="alert">
-                                        <p id="p"> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
+                                        <p> متن آزمایشی پیغام سایت</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <h5 class="title"> افزودن اسکان جدید</h5>
                         <div class="container">
                             <div class="row">
@@ -108,7 +114,7 @@
                                     <div>
                                         <div class="row editFeauter" style="justify-content: space-between;">
                                             <div class="col-lg-6 col-sm-12">
-                                                <label for="telephone" class="active">  شماره تماس :</label>
+                                                <label for="telephone" class="active"> شماره تماس :</label>
                                                 <input type="number" value="" id="telephone" name="telephone"
                                                     class="col-lg-5 col-sm-12 costPrice">
                                             </div>
@@ -117,8 +123,7 @@
                                                 <input type="radio" value="on" name="status" checked="checked"
                                                     class="col-lg-1 col-sm-6">
                                                 <label class="active">غیرفعال :</label>
-                                                <input type="radio" value="off" name="status"
-                                                    class="col-lg-1 col-sm-6">
+                                                <input type="radio" value="off" name="status" class="col-lg-1 col-sm-6">
                                             </div>
                                         </div>
                                     </div>
@@ -127,19 +132,20 @@
                                             <div class="col-lg-12 col-sm-12">
                                                 <label class="active"> آدرس :</label>
                                                 <textarea placeholder="آدرس را وارد کنید"
-                                                    class="col-lg-12 descriptionCost"
-                                                    name="address"></textarea>
+                                                    class="col-lg-12 descriptionCost" name="address"></textarea>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                     <div style="margin-bottom: 1.5rem;">
                                         <div class="row editFeauter" style="justify-content: space-between;">
                                             <label class="active picturs">انتخاب تصاویر :</label>
                                             <input type="hidden" name="photo_[id]" id="product-photo">
                                             <div class="col-lg-12 col-sm-12 ">
-                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo" style="margin:0;margin-top: 0.3rem;">
-                                                    <div class="dz-message" data-dz-message><span>برای آپلود فایل ها کلیک کنید.  </span></div>
+                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo"
+                                                    style="margin:0;margin-top: 0.3rem;">
+                                                    <div class="dz-message" data-dz-message><span>برای آپلود فایل ها
+                                                            کلیک کنید. </span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -188,7 +194,7 @@
         <!-- js -->
         <script src="js/costImg.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/jquery-1.10.1.min.js"></script> 
+        <script src="js/jquery-1.10.1.min.js"></script>
         <script src="js/persianDatepicker.js"></script>
         <script>
             Dropzone.prototype.defaultOptions.dictRemoveFile = "حذف فایل";
@@ -208,10 +214,10 @@
             });
             productGallery = function () {
                 document.getElementById('product-photo').value = photosGallery
-                
+
             }
-                   
-        </script>   
+
+        </script>
         <script>
             // persian date picker
             $(function () {

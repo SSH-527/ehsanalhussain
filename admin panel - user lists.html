@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ehsanalhussain-admin panel-manage costs</title>
     <!-- css -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <!-- code -->
+
 <body class="panel container">
     <div class="container dashboard" id="mainContent">
         <div class="row">
@@ -28,14 +27,14 @@
                 <div class="list">
                     <ul>
                         <li class="tabItem"> <a href="admin panel - costs.html"> لیست هزینه ها</a></li>
-                        <li class="tabItem active"> <a href="#"> لیست کاربران</a></li>    
+                        <li class="tabItem active"> <a href="#"> لیست کاربران</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-8">
                 <div class="iconSection col-lg-12 col-sm-12">
                     <div class="col-lg-1 col-sm-1  mobileMenu">
-                        <i class="fa fa-bars menuIcon" aria-hidden="true"></i>
+                        <i class="fa fa-bars menuIcon"></i>
                     </div>
                     <div class="col-lg-1 col-sm-1  exit exitBtn">
                         <img src="image/exit.png" alt="exit" title="خروج">
@@ -65,21 +64,21 @@
                                         <th class="tableHead">کد ملی </th>
                                         <th class="tableHead">زائر اولی</th>
                                         <th class="tableHead"> عملیات</th>
-                                            <tr>
-                                                <td>
-                                                    <a href="user information.html">1</a>
-                                                </td>
-                                                <td>کیان </td>
-                                                <td>کاظمی </td>
-                                                <td>09125480000</td>
-                                                <td>45548212211</td>
-                                                <td>بله</td>
-                                                <td>
-                                                    <a href="user-edit (admin).html">
-                                                        <button class="editCost">ویرایش</button>
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                        <tr>
+                                            <td>
+                                                <a href="user information.html">1</a>
+                                            </td>
+                                            <td>کیان </td>
+                                            <td>کاظمی </td>
+                                            <td>09125480000</td>
+                                            <td>45548212211</td>
+                                            <td>بله</td>
+                                            <td>
+                                                <a href="user-edit (admin).html">
+                                                    <button class="editCost">ویرایش</button>
+                                                </a>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>
                                                 <a href="user information.html">2</a>
@@ -252,21 +251,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- js -->
-                <script src="js/main.js"></script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-                <script type="text/javascript">
-        
-                $(document).ready(function () {
-        
-                    window.setTimeout(function () {
-                        $(".panelAlert").fadeTo(1000, 0).slideUp(1000, function () {
-                            $(this).remove();
-                        });
-                    }, 5000);
-        
-                });
-            </script>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
 </body>
 
 </html>

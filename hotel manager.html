@@ -7,10 +7,7 @@
     <title>ehsanalhussain</title>
     <!-- css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -50,10 +47,8 @@
                             <div class="col-lg-12 col-sm-12 chooseSection" style="display: flex; align-items: center;">
                                 <div class="col-lg-4 col-sm-12">
                                     <label> انتخاب شهر :</label>
-                                    <select class="costPrice" onchange="getHotel(this.value);" 
-                                    name="hotel_id" v-model="hotel"
-                                            id="hotel_id"
-                                    required >
+                                    <select class="costPrice" onchange="getHotel(this.value);" name="hotel_id"
+                                        v-model="hotel" id="hotel_id" required>
                                         <option>انتخاب کنید</option>
                                         <option value="karballa">کربلا</option>
                                         <option value="najaf">نجف</option>
@@ -63,7 +58,7 @@
                                 <div class="col-lg-4 col-sm-12">
                                     <label> انتخاب اقامتگاه :</label>
                                     <select class="costPrice" id="hotel" required>
-                                        
+
                                     </select>
                                 </div>
                                 <div class="col-lg-3 col-sm-12">
@@ -75,10 +70,9 @@
                             <div class="row">
                                 <div class="col-lg-12 searchUser">
                                     <form class="col-lg-6 col-sm-12">
-                                        <input type="text" class="icon"
-                                            placeholder="نام و نام خانوادگی را وارد کنید" id="searchUser"
-                                            onkeyup="userReserve()">
-                                            <button>جستجو</button>
+                                        <input type="text" class="icon" placeholder="نام و نام خانوادگی را وارد کنید"
+                                            id="searchUser" onkeyup="userReserve()">
+                                        <button>جستجو</button>
 
                                     </form>
                                 </div>
@@ -102,7 +96,7 @@
                                             </td>
 
                                             <td>
-                                              <a href="room detail.html">14</a>
+                                                <a href="room detail.html">14</a>
                                             </td>
                                             <td>
                                                 1402-05-31
@@ -218,21 +212,21 @@
             }
         </script>
         <script>
-            function getHotel(hotel){
-            console.log(hotel);
-            //empty
-            $.ajax({
-                type: 'post',
-                url: '',
-                success: function (data) {
-                    data = JSON.parse(data);
+            function getHotel(hotel) {
+                console.log(hotel);
+                //empty
+                $.ajax({
+                    type: 'post',
+                    url: '',
+                    success: function (data) {
+                        data = JSON.parse(data);
                         data.forEach(element => {
-                        $('#hotel').append('<option value="'+element.name+'">'+element.name+'</option>');
-                       console.log(element)
-                    });
-                }
-            });
-        }
+                            $('#hotel').append('<option value="' + element.name + '">' + element.name + '</option>');
+                            console.log(element)
+                        });
+                    }
+                });
+            }
         </script>
 </body>
 

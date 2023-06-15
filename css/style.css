@@ -1212,6 +1212,7 @@ td>a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
 	z-index: 1;
 }
 
@@ -1223,7 +1224,6 @@ td>a {
 }
 
 .alertBox>div {
-	position: absolute;
 	top: 15px;
 	display: flex;
 	justify-content: center;
@@ -1233,6 +1233,7 @@ td>a {
 	color: #222222;
 	border: 1px solid #DCDCDC;
 	z-index: 1;
+	margin-top: 1.5rem;
 }
 
 .alertBox>div>p {
@@ -1269,8 +1270,8 @@ div.alertWarrning {
 }
 
 .panelAlert {
-	position: relative;
-	height: 100px;
+	
+	height: auto;
 	z-index: 0;
 }
 
@@ -2000,3 +2001,6 @@ form#filter>span {
 	width: 100%;
 	margin-top: 1rem;
   }
+  .FontAwesome-debug{
+    font-family: 'FontAwesome';
+}
