@@ -1745,6 +1745,7 @@ button.reserve {
 	margin-top: 1rem;
 	margin-bottom: 1.5rem;
 	font-size: 0.9rem;
+	cursor: pointer !important;
 }
 
 .editImgItem {

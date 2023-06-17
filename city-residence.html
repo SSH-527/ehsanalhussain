@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,15 +10,14 @@
     <link rel="stylesheet" href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-   <!-- persian datepicker -->
-    <link rel="stylesheet" href="css/persianDatepicker-default.css" />
-    <link href="css/vertical-responsive-menu.min.css" rel="stylesheet" />
-    <link href="css/prism.css" rel="stylesheet" />
-    <link href='css/normalize.css' rel='stylesheet' />
-    <script src="js/prism.js"></script>
-    <script src="js/vertical-responsive-menu.min.js"></script>
+    <!-- persian datepicker -->
+    <link rel="stylesheet" href="css/persian-datepicker-uncompress.css">
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/persian-date.min.js"></script>
+    <script src="js/persian-datepicker.min.js"></script>
 </head>
 <!-- code -->
+
 <body class="panel container">
     <div class="container dashboard">
         <div class="row">
@@ -74,17 +74,21 @@
                                     <div class="col-lg-4 col-sm-12">
                                         <label>تاریخ ورود :</label>
                                         <input type="hidden" value="">
-                                        <input type="text" class="costPrice" id="start" placeholder="yyyy-mm-dd"
-                                            required>
+                                        <input type="text" class="costPrice" id="start" placeholder="yyyy/mm/dd"
+                                            value="1402/03/31" required>
                                     </div>
                                     <div class="col-lg-4 col-sm-12">
                                         <label>تاریخ خروج :</label>
                                         <input type="hidden" value="">
-                                        <input type="text" class="costPrice" id="end" placeholder="yyyy-mm-dd" required>
+                                        <input type="text" class="costPrice" id="end" placeholder="yyyy/mm/dd" 
+                                        value="1402/03/31"
+                                        required>
                                     </div>
                                     <div class="col-lg-3 col-sm-12">
                                         <label> ظرفیت :</label>
-                                        <input type="text" class="costPrice" required>
+                                        <input type="text" class="costPrice" id="capacity" value="0"
+                                            onkeyup="toEnglishNumber(this.value,'capacity');" pattern="[0-9]*"
+                                            inputmode="numeric" required>
                                         <button class="searchRoom" type="submit">جستجو اتاق</button>
                                     </div>
                                 </div>
@@ -209,11 +213,10 @@
     <!-- js -->
 
     <script src="js/main.js"></script>
-    <script src="js/jquery-1.10.1.min.js"></script>
-    <script src="js/persianDatepicker.js"></script>
     <script>
         var slideIndex = 0;
         var slides, dots;
+
         function showSlides() {
             var i;
             slides = document.getElementsByClassName("mySlides");
@@ -222,7 +225,9 @@
                 slides[i].style.display = "none";
             }
             slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" activeSlide", "");
             }
@@ -236,8 +241,11 @@
 
         function plusSlides(position) {
             slideIndex += position;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            else if (slideIndex < 1) { slideIndex = slides.length }
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            } else if (slideIndex < 1) {
+                slideIndex = slides.length
+            }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
@@ -249,8 +257,11 @@
         }
 
         function currentSlide(index) {
-            if (index > slides.length) { index = 1 }
-            else if (index < 1) { index = slides.length }
+            if (index > slides.length) {
+                index = 1
+            } else if (index < 1) {
+                index = slides.length
+            }
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
@@ -286,20 +297,62 @@
         });
     </script>
     <script>
+        function toEnglishNumber(strNum, name) {
+            var pn = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+            var en = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+            var cache = strNum;
+            for (var i = 0; i < 10; i++) {
+                var regex_fa = new RegExp(pn[i], 'g');
+                cache = cache.replace(regex_fa, en[i]);
+            }
+            $('#' + name).val(cache);
+        }
+        $('#capacity').keyup(function () {
+            if (/\D/g.test(this.value)) {
+                // Filter non-digits from input value.
+                this.value = this.value.replace(/\D/g, '');
+            }
+        })
+    </script>
+    <script>
         $(document).ready(function () {
             $("#filter").on("change", "input:checkbox", function () {
                 $("#filter").submit();
             });
         });
     </script>
-    <script>
-        // persian date picker
-        $(function () {
-            $("#start").persianDatepicker({ startDate: "today", endDate: "1440/11/5", formatDate: "YYYY-0M-0D" });
-            $("#end").persianDatepicker({ startDate: "today", endDate: "1440/11/5", formatDate: "YYYY-0M-0D" });
-        })
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#start').persianDatepicker({
+                observer: true,
+                format: 'YYYY/MM/DD',
+                initialValueType: 'persian',
+                "minDate": 1686743540000,
+                "maxDate": 1687693940000,
+                toolbox: {
+                    "enabled": true,
+                    "calendarSwitch": {
+                        "enabled": false,
+                        "format": "MMMM"
+                    },
+                }
+            });
+            $('#end').persianDatepicker({
+                observer: true,
+                format: 'YYYY/MM/DD',
+                initialValueType: 'persian',
+                "minDate": 1686743540000,
+                "maxDate": 1687693940000,
+                toolbox: {
+                    "enabled": true,
+                    "calendarSwitch": {
+                        "enabled": false,
+                        "format": "MMMM"
+                    },
+                }
+            });
+        });
     </script>
-
 </body>
 
 </html>

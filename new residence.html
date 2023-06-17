@@ -12,12 +12,11 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/dropzone.css">
     <script type="text/javascript" src="js/dropzone.js"></script>
-    <!-- <link href='css/normalize.css' rel='stylesheet' /> -->
-    <link rel="stylesheet" href="css/vertical-responsive-menu.min.css" />
-    <link rel="stylesheet" href="css/prism.css" />
-    <link rel="stylesheet" href="css/persianDatepicker-default.css" />
-    <script src="js/prism.js"></script>
-    <script src="js/vertical-responsive-menu.min.js"></script>
+    <!-- persian datepicker -->
+    <link rel="stylesheet" href="css/persian-datepicker-uncompress.css">
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/persian-date.min.js"></script>
+    <script src="js/persian-datepicker.min.js"></script>
 </head>
 <!-- code -->
 
@@ -99,14 +98,14 @@
                                         <div class="row editFeauter">
                                             <div class="col-lg-6 col-sm-12">
                                                 <label class="active"> تاریخ شروع رزرو :</label>
-                                                <input type="text" value="" id="start" name="start date"
-                                                    class="col-lg-5 col-sm-12 costPrice usage" placeholder="yyyy-mm-dd"
+                                                <input type="text" id="start" name="start date"
+                                                    class="col-lg-5 col-sm-12 costPrice start" placeholder="yyyy-mm-dd"
                                                     required>
                                             </div>
                                             <div class="col-lg-6 col-sm-12">
                                                 <label class="active"> تاریخ پایان رزرو :</label>
-                                                <input type="text" value="" id="end" name="end date"
-                                                    class="col-lg-5 col-sm-12 costPrice usage" placeholder="yyyy-mm-dd"
+                                                <input type="text" id="end" name="end date"
+                                                    class="col-lg-5 col-sm-12 costPrice end" placeholder="yyyy-mm-dd"
                                                     required>
                                             </div>
                                         </div>
@@ -194,8 +193,6 @@
         <!-- js -->
         <script src="js/costImg.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/jquery-1.10.1.min.js"></script>
-        <script src="js/persianDatepicker.js"></script>
         <script>
             Dropzone.prototype.defaultOptions.dictRemoveFile = "حذف فایل";
         </script>
@@ -214,16 +211,39 @@
             });
             productGallery = function () {
                 document.getElementById('product-photo').value = photosGallery
-
             }
-
         </script>
-        <script>
-            // persian date picker
-            $(function () {
-                $("#start").persianDatepicker({ startDate: "today", endDate: "1440/11/5", formatDate: "YYYY-0M-0D" });
-                $("#end").persianDatepicker({ startDate: "today", endDate: "1440/11/5", formatDate: "YYYY-0M-0D" });
-            })
+         <script type="text/javascript">
+            $(document).ready(function () {
+                $('#start').persianDatepicker({
+                    observer: true,
+                    format: 'YYYY/MM/DD',
+                    initialValueType: 'persian',
+                    "minDate": 1686743540000,
+                    "maxDate": 1687693940000,
+                    toolbox: {
+                        "enabled": true,
+                        "calendarSwitch": {
+                            "enabled": false,
+                            "format": "MMMM"
+                        },
+                    }
+                });
+                $('#end').persianDatepicker({
+                    observer: true,
+                    format: 'YYYY/MM/DD',
+                    initialValueType: 'persian',
+                    "minDate": 1686743540000,
+                    "maxDate": 1687693940000,
+                    toolbox: {
+                        "enabled": true,
+                        "calendarSwitch": {
+                            "enabled": false,
+                            "format": "MMMM"
+                        },
+                    }
+                });
+            });
         </script>
 </body>
 
