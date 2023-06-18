@@ -2029,3 +2029,9 @@ form#filter>span {
 .pos-rel {
 	position: relative;
 }
+.pill-private {
+	background-color: #f2b74a;
+}
+.pill-public {
+	background-color: dodgerblue;
+}
