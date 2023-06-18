@@ -60,7 +60,7 @@
                             <div class="row">
                                 <form method="post" class="col-lg-12 col-sm-12 editCostForm" id="newResidence">
                                     <div>
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                        <div class="row editFeauter">
                                             <div class="col-lg-6 col-sm-12">
                                                 <label for="titleResidence" class="active"> عنوان اتاق :</label>
                                                 <input type="text" value="" id="titleResidence" name="titleResidence"
@@ -68,13 +68,15 @@
                                             </div>
                                             <div class="col-lg-6 col-sm-12">
                                                 <label for="Capacity" class="active"> ظرفیت :</label>
-                                                <input type="number" value="" id="Capacity" name="Capacity"
-                                                    class="col-lg-5 col-sm-12 costPrice">
+                                                <input type="text" value="" id="Capacity" name="Capacity"
+                                                    class="col-lg-5 col-sm-12 costPrice"
+                                                    onkeyup="toEnglishNumber(this.value,'Capacity');" pattern="[0-9]*"
+                                                    inputmode="numeric">
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                        <div class="row editFeauter">
                                             <div class="col-lg-5 col-sm-12">
                                                 <label class="active">فعال :</label>
                                                 <input type="radio" value="on" name="status" checked="checked"
@@ -92,13 +94,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="margin-bottom: 1.5rem;">
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                    <div class="mg-bottom">
+                                        <div class="row editFeauter">
                                             <label class="active picturs">انتخاب تصاویر :</label>
                                             <input type="hidden" name="photo_[id]" id="product-photo">
                                             <div class="col-lg-12 col-sm-12 ">
-                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo"
-                                                    style="margin:0;margin-top: 0.3rem;">
+                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone mg-top-3"
+                                                    id="photo">
                                                     <div class="dz-message" data-dz-message><span>برای آپلود فایل ها
                                                             کلیک کنید. </span></div>
                                                 </div>
@@ -117,8 +119,14 @@
                                     </div>
                                     <div>
                                         <div class="row editFeauter col-lg-4 leftBtn">
-                                            <div class="col-lg-12 col-sm-12">
-                                                <button type="submit" class="editBtn">ثبت اتاق</button>
+                                            <div class="col-lg-12 col-sm-12 actionBtn">
+                                                <button type="submit" class="editBtn col-lg-3">ثبت اتاق</button>
+                                                <form id="cancel">
+                                                    <button type="submit" class="editBtn cancelBtn col-lg-3"
+                                                        onclick="document.getElementById('cancel').submit();">
+                                                        انصراف</button>
+                                                </form>
+
                                             </div>
                                         </div>
                                     </div>
@@ -168,6 +176,24 @@
                 document.getElementById('product-photo').value = photosGallery
 
             }
+        </script>
+        <script>
+            function toEnglishNumber(strNum, name) {
+                var pn = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+                var en = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+                var cache = strNum;
+                for (var i = 0; i < 10; i++) {
+                    var regex_fa = new RegExp(pn[i], 'g');
+                    cache = cache.replace(regex_fa, en[i]);
+                }
+                $('#' + name).val(cache);
+            }
+            $('#Capacity').keyup(function () {
+                if (/\D/g.test(this.value)) {
+                    // Filter non-digits from input value.
+                    this.value = this.value.replace(/\D/g, '');
+                }
+            })
         </script>
 </body>
 

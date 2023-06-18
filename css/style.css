@@ -1065,14 +1065,6 @@ select {
 	color: #222222;
 }
 
-.editFeauter.leftBtn {
-	float: left;
-}
-
-.editFeauter.leftBtn>div {
-	width: 100%;
-}
-
 .inputActive {
 	background-color: #FFF !important;
 	border-color: #DCDCDC;
@@ -1457,6 +1449,7 @@ input.usage::placeholder {
 	justify-content: center;
 	margin-top: 1.5rem;
 	width: 100%;
+	align-items:center ;
 }
 
 .chooseSection>div {
@@ -1473,7 +1466,7 @@ button.searchRoom {
 	margin-top: 1rem;
 	border: none;
 	border-radius: 5px;
-	padding: 0.5rem 0;
+	padding: 0.7rem 0;
 	background-color: #1A8ACC;
 	color: #fff;
 }
@@ -2002,4 +1995,37 @@ form#filter>span {
   }
   .FontAwesome-debug{
     font-family: 'FontAwesome';
+}
+ .editFeauter.leftBtn {
+	float: left;
+}
+.editFeauter.leftBtn>div {
+	width: 100%;
+} 
+.actionBtn {
+	display: flex;
+	flex-direction: row-reverse;
+}
+.cancelBtn {
+	background-color: #d63838 !important;
+	margin-left: 1rem !important;
+}
+.mg-top-3 {
+	margin-top: 0.3rem;
+}
+.mg-bottom {
+	margin-bottom: 1.5rem;
+}
+.infLeader {
+	display: flex; 
+	justify-content: flex-end;
+}
+.nodata {
+	height: 100vh;
+}
+.mg-top {
+	margin-top: 1.5rem;
+}
+.pos-rel {
+	position: relative;
 }

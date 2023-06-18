@@ -76,7 +76,7 @@
                             <div class="row">
                                 <form method="post" class="col-lg-12 col-sm-12 editCostForm" id="newResidence">
                                     <div>
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                        <div class="row editFeauter">
                                             <div class="col-lg-6 col-sm-12">
                                                 <label for="titleResidence" class="active"> عنوان اسکان :</label>
                                                 <input type="text" value="" id="titleResidence" name="titleResidence"
@@ -111,7 +111,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                        <div class="row editFeauter">
                                             <div class="col-lg-6 col-sm-12">
                                                 <label for="telephone" class="active"> شماره تماس :</label>
                                                 <input type="number" value="" id="telephone" name="telephone"
@@ -136,13 +136,12 @@
                                         </div>
 
                                     </div>
-                                    <div style="margin-bottom: 1.5rem;">
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                    <div class="mg-bottom">
+                                        <div class="row editFeauter">
                                             <label class="active picturs">انتخاب تصاویر :</label>
                                             <input type="hidden" name="photo_[id]" id="product-photo">
                                             <div class="col-lg-12 col-sm-12 ">
-                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo"
-                                                    style="margin:0;margin-top: 0.3rem;">
+                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone mg-top-3" id="photo">
                                                     <div class="dz-message" data-dz-message><span>برای آپلود فایل ها
                                                             کلیک کنید. </span></div>
                                                 </div>
@@ -161,8 +160,12 @@
                                     </div>
                                     <div>
                                         <div class="row editFeauter col-lg-4 leftBtn">
-                                            <div class="col-lg-12 col-sm-12">
-                                                <button type="submit" class="editBtn">ثبت اسکان</button>
+                                            <div class="col-lg-12 col-sm-12 actionBtn">
+                                                <button type="submit" class="editBtn col-lg-3" >ثبت اسکان</button>
+                                                <form id="cancel">
+                                                    <button type="submit" class="editBtn cancelBtn col-lg-3" onclick="document.getElementById('cancel').submit();"> انصراف</button>
+                                                </form>
+                                                
                                             </div>
                                         </div>
                                     </div>

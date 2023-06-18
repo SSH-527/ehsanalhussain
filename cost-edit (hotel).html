@@ -60,7 +60,7 @@
                                 <form method="post" class="col-lg-12 col-sm-12 editCostForm">
                                     <div>
                                         <div class="row editFeauter">
-                                            <div class="row editFeauter" style="justify-content: space-between;">
+                                            <div class="row editFeauter">
                                                 <div class="col-lg-6 col-sm-12">
                                                     <label for="titleCost" class="active"> عنوان هزینه :</label>
                                                     <input type="text" value="اسکان" id="titleCost" name="titleCost"
@@ -87,7 +87,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                        <div class="row editFeauter">
                                             <label class="active picturs">ویرایش تصاویر :</label>
                                             <input type="hidden" name="photo_[id]" id="product-photo">
                                             <div class="col-lg-12 col-sm-12 ">
@@ -130,9 +130,12 @@
                                     </div>
                                     <div>
                                         <div class="row editFeauter col-lg-4 leftBtn">
-                                            <div class="col-lg-12 col-sm-12">
-                                                <button type="submit" class="editBtn" onclick="productGallery()">ویرایش
-                                                    هزینه</button>
+                                            <div class="col-lg-12 col-sm-12 actionBtn">
+                                                <button type="submit" class="editBtn col-lg-3" > ویرایش هزینه</button>
+                                                <form id="cancel">
+                                                    <button type="submit" class="editBtn cancelBtn col-lg-3" onclick="document.getElementById('cancel').submit();"> انصراف</button>
+                                                </form>
+                                                
                                             </div>
                                         </div>
                                     </div>

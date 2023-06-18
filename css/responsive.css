@@ -432,5 +432,12 @@
      .searchUser > form {
       width: 100%;
    }
+   .actionBtn {
+      flex-direction: column;
+   }
+   .cancelBtn{
+      margin: 0 !important;
+      margin-bottom: 1.5rem !important;
+   }
    
 }

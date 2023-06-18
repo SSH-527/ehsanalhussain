@@ -7,13 +7,14 @@
     <title>ehsanalhussain</title>
     <!-- css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/dropzone.css">
     <script type="text/javascript" src="js/dropzone.js"></script>
-    </head>
+</head>
 <!-- code -->
+
 <body class="panel container">
     <div class="container dashboard" id="mainContent">
         <div class="row">
@@ -59,7 +60,7 @@
                             <div class="row">
                                 <form method="post" class="col-lg-12 col-sm-12 editCostForm" id="newResidence">
                                     <div>
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                        <div class="row editFeauter">
                                             <div class="col-lg-6 col-sm-12">
                                                 <label for="titleResidence" class="active"> عنوان اتاق :</label>
                                                 <input type="text" value="اتاق 14" id="titleResidence"
@@ -68,19 +69,20 @@
                                             <div class="col-lg-6 col-sm-12">
                                                 <label for="Capacity" class="active"> ظرفیت :</label>
                                                 <input type="number" value="5" id="Capacity" name="Capacity"
-                                                    class="col-lg-5 col-sm-12 costPrice">
+                                                    class="col-lg-5 col-sm-12 costPrice"
+                                                    onkeyup="toEnglishNumber(this.value,'Capacity');" pattern="[0-9]*"
+                                                    inputmode="numeric">
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                        <div class="row editFeauter">
                                             <div class="col-lg-5 col-sm-12">
                                                 <label class="active">فعال :</label>
                                                 <input type="radio" value="on" name="status" checked="checked"
                                                     class="col-lg-1 col-sm-6">
                                                 <label class="active">غیرفعال :</label>
-                                                <input type="radio" value="off" name="status"
-                                                    class="col-lg-1 col-sm-6">
+                                                <input type="radio" value="off" name="status" class="col-lg-1 col-sm-6">
                                             </div>
                                             <div class="col-lg-5 col-sm-12">
                                                 <label class="active">عمومی :</label>
@@ -92,13 +94,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div style="margin-bottom: 1.5rem;">
-                                        <div class="row editFeauter" style="justify-content: space-between;">
+                                    <div class="mg-bottom">
+                                        <div class="row editFeauter">
                                             <label class="active picturs">ویرایش تصاویر :</label>
                                             <input type="hidden" name="photo_[id]" id="product-photo">
                                             <div class="col-lg-12 col-sm-12 ">
-                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone" id="photo"
-                                                    style="margin:0;margin-top: 0.3rem;">
+                                                <div class="newImg newRes col-lg-12 col-sm-12 dropzone mg-top-3"
+                                                    id="photo">
                                                     <div class="row">
                                                         <!-- @foreach($product->photos as $photo) -->
                                                         <div class="col-lg-6 col-sm-12 editImgItem"
@@ -137,8 +139,14 @@
                                     </div>
                                     <div>
                                         <div class="row editFeauter col-lg-4 leftBtn">
-                                            <div class="col-lg-12 col-sm-12">
-                                                <button type="submit" class="editBtn">ویرایش اتاق</button>
+                                            <div class="col-lg-12 col-sm-12 actionBtn">
+                                                <button type="submit" class="editBtn col-lg-3">ویرایش اتاق</button>
+                                                <form id="cancel">
+                                                    <button type="submit" class="editBtn cancelBtn col-lg-3"
+                                                        onclick="document.getElementById('cancel').submit();">
+                                                        انصراف</button>
+                                                </form>
+
                                             </div>
                                         </div>
                                     </div>
@@ -193,6 +201,24 @@
                 photos.splice(index, 1);
                 document.getElementById('updated_photo_' + id).remove();
             }
+        </script>
+        <script>
+            function toEnglishNumber(strNum, name) {
+                var pn = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+                var en = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+                var cache = strNum;
+                for (var i = 0; i < 10; i++) {
+                    var regex_fa = new RegExp(pn[i], 'g');
+                    cache = cache.replace(regex_fa, en[i]);
+                }
+                $('#' + name).val(cache);
+            }
+            $('#Capacity').keyup(function () {
+                if (/\D/g.test(this.value)) {
+                    // Filter non-digits from input value.
+                    this.value = this.value.replace(/\D/g, '');
+                }
+            })
         </script>
 </body>
 
