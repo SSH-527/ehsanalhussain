@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <form class="col-lg-12" method="post">
+                            <form class="col-lg-12" method="post" id="chooseDate">
                                 <div class="col-lg-12 col-sm-12 chooseSection">
                                     <div class="col-lg-4 col-sm-12">
                                         <label>تاریخ ورود :</label>
@@ -92,20 +92,18 @@
                                         <button class="searchRoom" type="submit">جستجو اتاق</button>
                                     </div>
                                 </div>
+                                <div class="col-lg-12 col-sm-12 container">
+                                    <div class="col-lg-4 col-sm-12 filterRoom">
+                                        <div>
+                                            <input type="checkbox" id="empty" name="allEmptyRoom">
+                                            <label for="empty"> فقط اتاق های خالی</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </form>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-1g-12">
-                                        <div class="container">
-                                            <form id="filter" action="city-residence.html">
-                                                <div class="col-lg-4 filterRoom">
-                                                    <div>
-                                                        <input type="checkbox" id="empty" name="allEmptyRoom">
-                                                        <label for="empty"> فقط اتاق های خالی</label>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
                                         <div class="col-1g-12 searchInfo">
                                             <p>در بازه ی مورد نظر 4 اتاق خالی با ظرفیت 5 نفر پیدا شد.</p>
                                             <p>تعداد اتاق های پر در این بازه 5 مورد است. میتوانید اتاق های پر را در بازه
@@ -117,6 +115,7 @@
                                                     <div>
                                                         <img src="image/room1.png">
                                                         <h5>اتاق 14</h5>
+                                                        <h6>هتل آسمان</h6>
                                                         <h6>ظرفیت 5 نفر</h6>
                                                         <div class="empty">اتاق خالی</div>
                                                         <form method="post" action="show room-empty.html">
@@ -129,6 +128,7 @@
                                                     <div>
                                                         <img src="image/room1.png">
                                                         <h5>اتاق 14</h5>
+                                                        <h6>هتل آسمان</h6>
                                                         <h6>ظرفیت 5 نفر</h6>
                                                         <div class="empty">اتاق خالی</div>
                                                         <form method="post" action="show room-empty.html">
@@ -141,6 +141,7 @@
                                                     <div>
                                                         <img src="image/room1.png">
                                                         <h5>اتاق 14</h5>
+                                                        <h6>هتل آسمان</h6>
                                                         <h6>ظرفیت 5 نفر</h6>
                                                         <div class="fill">اتاق پر</div>
                                                         <button type="submit" class="disableShowRoom">مشاهده
@@ -151,6 +152,7 @@
                                                     <div>
                                                         <img src="image/room1.png">
                                                         <h5>اتاق 14</h5>
+                                                        <h6>هتل آسمان</h6>
                                                         <h6>ظرفیت 5 نفر</h6>
                                                         <div class="empty">اتاق خالی</div>
                                                         <form method="post" action="show room-empty.html">
@@ -163,6 +165,7 @@
                                                     <div>
                                                         <img src="image/room1.png">
                                                         <h5>اتاق 14</h5>
+                                                        <h6>هتل آسمان</h6>
                                                         <h6>ظرفیت 5 نفر</h6>
                                                         <div class="fill">اتاق پر</div>
                                                         <button type="submit" class="disableShowRoom">مشاهده
@@ -173,6 +176,7 @@
                                                     <div>
                                                         <img src="image/room1.png">
                                                         <h5>اتاق 14</h5>
+                                                        <h6>هتل آسمان</h6>
                                                         <h6>ظرفیت 5 نفر</h6>
                                                         <div class="empty">اتاق خالی</div>
                                                         <form method="post" action="show room-empty.html">
@@ -182,6 +186,10 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>
+                                        <div class="col-1g-12 searchInfo searchInfo-nothing">
+                                            <p> متاسفانه در بازه ی مورد نظر اتاق خالی پیدا نشد.</p>
+                                            <p>لطفا بازه ی دیگری انتخاب کنید.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -316,8 +324,8 @@
     </script>
     <script>
         $(document).ready(function () {
-            $("#filter").on("change", "input:checkbox", function () {
-                $("#filter").submit();
+            $("#chooseDate").on("change", "input:checkbox", function () {
+                $("#chooseDate").submit();
             });
         });
     </script>

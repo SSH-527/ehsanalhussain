@@ -1404,6 +1404,17 @@ input.usage::placeholder {
 	width: 100%;
 	border-radius: 5px;
 }
+.selectCity > div {
+	background-color: #1A8ACC;
+	color: #FFF;
+	text-align: center;
+	margin-top: 0.5rem;
+	padding: 0.5rem;
+	border-radius: 5px;
+}
+.selectCity > div > a {
+	color: #fff;
+}
 
 .selectCity>form {
 	margin-top: 0.6rem;
@@ -1449,7 +1460,6 @@ input.usage::placeholder {
 	justify-content: center;
 	margin-top: 1.5rem;
 	width: 100%;
-	align-items:center ;
 }
 
 .chooseSection>div {
@@ -1491,6 +1501,11 @@ div.residenceDesc>p {
 	padding: 0.8rem;
 	color: #fff;
 	border-radius: 5px;
+	margin-bottom: 1.5rem;
+}
+.searchInfo-nothing {
+	background-color: #DCDCDC;
+	color: #222222;
 }
 
 .searchInfo>p {
@@ -1504,6 +1519,7 @@ div.residenceDesc>p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 1.5rem;
 }
 
 .filterRoom>div>label {
