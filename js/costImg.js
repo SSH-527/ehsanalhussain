@@ -27,13 +27,15 @@ popupWrapper.addEventListener("click", function () {
 })
 //////////////////////
 // popup
-let cancel = document.querySelector(".cancelRes");
+let cancel = document.querySelectorAll(".cancelRes");
 let popupCancel = document.querySelector(".popupCancelRes");
 let closePopupCancel = document.querySelector(".closePopupCancel");
 let popupWrapperCancel = document.querySelector(".popupWrapper");
-cancel.addEventListener("click", function () {
-  popupCancel.classList.add("showPopup");
-  popupWrapperCancel.classList.add("showPopup");
+cancel.forEach((e)=>{
+  e.addEventListener("click", function () {
+    popupCancel.classList.add("showPopup");
+    popupWrapperCancel.classList.add("showPopup");
+  })
 })
 closePopupCancel.addEventListener("click", function () {
   popupCancel.classList.remove("showPopup");

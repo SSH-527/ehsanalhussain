@@ -439,5 +439,7 @@
       margin: 0 !important;
       margin-bottom: 1.5rem !important;
    }
-   
+   .reserveForm {
+      width: 100%;
+   }
 }

@@ -1608,12 +1608,6 @@ p.fill {
 	color: #d63838;
 }
 
-.roomDetailes>form {
-	width: 50%;
-	float: left;
-	margin-top: 3rem;
-}
-
 .roomDetailes>form>button {
 	background-color: #1A8ACC;
 	border: none;
@@ -2050,4 +2044,19 @@ form#filter>span {
 }
 .pill-public {
 	background-color: dodgerblue;
+}
+.reserveForm h6 {
+	color: #1A8ACC;
+}
+.reserveForm h6 > span {
+	color: #222222;
+}
+.reserveForm {
+	width: 50%;
+}
+.reserveForm label {
+	color: #1A8ACC;
+}
+.reserveForm select {
+	margin: 0.3rem 0 1.5rem 0;
 }
